@@ -1,0 +1,16 @@
+#######################
+# files to be ignored #
+#######################
+
+# OS generated files #
+######################
+
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Temporary files #
+###################
+
+*~
