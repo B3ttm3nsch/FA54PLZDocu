@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.23)  29 JUN 2017 09:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.23)  29 JUN 2017 17:00
 entering extended mode
 **./Projektdokumentation.tex
 (Projektdokumentation.tex
@@ -1550,20 +1550,20 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 38.
  (Deckblatt.tex
-<Bilder/logo_handelskammer.png, id=274, 472.76625pt x 245.41687pt>
+<Bilder/logo_handelskammer.png, id=270, 472.76625pt x 245.41687pt>
 File: Bilder/logo_handelskammer.png Graphic file (type png)
 
 <use Bilder/logo_handelskammer.png>
 Package pdftex.def Info: Bilder/logo_handelskammer.png used on input line 5.
 (pdftex.def)             Requested size: 118.19127pt x 61.35406pt.
 
-<Bilder/dmz.jpg, id=276, 370.0224pt x 245.2362pt>
+<Bilder/dmz.jpg, id=272, 370.0224pt x 245.2362pt>
 File: Bilder/dmz.jpg Graphic file (type jpg)
  <use Bilder/dmz.jpg>
 Package pdftex.def Info: Bilder/dmz.jpg used on input line 17.
 (pdftex.def)             Requested size: 296.01831pt x 196.18922pt.
 
-<Bilder/logo_oszimt.png, id=277, 154.32657pt x 45.92157pt>
+<Bilder/logo_oszimt.png, id=273, 154.32657pt x 45.92157pt>
 File: Bilder/logo_oszimt.png Graphic file (type png)
 
 <use Bilder/logo_oszimt.png>
@@ -1585,37 +1585,45 @@ LaTeX Font Info:    Try loading font information for T1+lmss on input line 46.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmss.fd"
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-(Projektdokumentation.toc
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 2.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
+
+Package hyperref Warning: old toc file detected, not used; run LaTeX again.
+
+\tf@toc=\write6
+\openout6 = `Projektdokumentation.toc'.
+
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 47.
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 2.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 47.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 2.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 47.
+
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 2.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 47.
+
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 2.
+(Font)              <10.95> on input line 47.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 2.
+(Font)              <8> on input line 47.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 2.
-LaTeX Font Info:    Try loading font information for U+msa on input line 2.
+(Font)              <6> on input line 47.
+LaTeX Font Info:    Try loading font information for U+msa on input line 47.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 2.
+LaTeX Font Info:    Try loading font information for U+msb on input line 47.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1623,25 +1631,6 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: Bilder/logo_oszimt.png Graphic file (type png)
 
 <use Bilder/logo_oszimt.png>
-Package pdftex.def Info: Bilder/logo_oszimt.png used on input line 46.
-(pdftex.def)             Requested size: 61.72952pt x 18.36829pt.
-
-Overfull \vbox (10.95831pt too high) has occurred while \output is active []
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 46.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 46.
-
-[1
-
-
-])
-\tf@toc=\write6
-\openout6 = `Projektdokumentation.toc'.
-
-File: Bilder/logo_oszimt.png Graphic file (type png)
- <use Bilder/logo_oszimt.png>
 Package pdftex.def Info: Bilder/logo_oszimt.png used on input line 47.
 (pdftex.def)             Requested size: 61.72952pt x 18.36829pt.
 
@@ -1652,17 +1641,23 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 47.
 
-[2]
+[1
+
+
+]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 50.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 50.
- (Projektdokumentation.lof)
+
+
+Package hyperref Warning: old lof file detected, not used; run LaTeX again.
+
 \tf@lof=\write7
 \openout7 = `Projektdokumentation.lof'.
 
 File: Bilder/logo_oszimt.png Graphic file (type png)
- <use Bilder/logo_oszimt.png>
+<use Bilder/logo_oszimt.png>
 Package pdftex.def Info: Bilder/logo_oszimt.png used on input line 51.
 (pdftex.def)             Requested size: 61.72952pt x 18.36829pt.
 
@@ -1673,7 +1668,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 51.
 
-[3
+[2
 
 
 ]
@@ -1681,12 +1676,15 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 54.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 54.
- (Projektdokumentation.lot)
+
+
+Package hyperref Warning: old lot file detected, not used; run LaTeX again.
+
 \tf@lot=\write8
 \openout8 = `Projektdokumentation.lot'.
 
 File: Bilder/logo_oszimt.png Graphic file (type png)
- <use Bilder/logo_oszimt.png>
+<use Bilder/logo_oszimt.png>
 Package pdftex.def Info: Bilder/logo_oszimt.png used on input line 55.
 (pdftex.def)             Requested size: 61.72952pt x 18.36829pt.
 
@@ -1697,7 +1695,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 55.
 
-[4
+[3
 
 
 ]
@@ -1719,12 +1717,14 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 58.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 58.
-(Projektdokumentation.lol)
+
+Package hyperref Warning: old lol file detected, not used; run LaTeX again.
+
 \tf@lol=\write9
 \openout9 = `Projektdokumentation.lol'.
 
 File: Bilder/logo_oszimt.png Graphic file (type png)
- <use Bilder/logo_oszimt.png>
+<use Bilder/logo_oszimt.png>
 Package pdftex.def Info: Bilder/logo_oszimt.png used on input line 59.
 (pdftex.def)             Requested size: 61.72952pt x 18.36829pt.
 
@@ -1735,7 +1735,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 59.
 
-[5
+[4
 
 
 ]
@@ -1756,7 +1756,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 67.
 
-[6
+[5
 
 
 ] (Inhalt.tex (Inhalt/Einleitung.tex
@@ -1780,13 +1780,43 @@ ndefined on input line 11.
 Package acronym Info: Label `acro:FA54' newly defined as it shall be overridden
 
 although it is yet undefined on input line 12.
+
+Package acronym Warning: Acronym `FA54' is not defined on input line 12.
+
+
+Package acronym Warning: Acronym `FA54' is not defined on input line 12.
+
 Package acronym Info: Label `acro:P/LZ' newly defined as it shall be overridden
 
 although it is yet undefined on input line 14.
+
+Package acronym Warning: Acronym `P/LZ' is not defined on input line 14.
+
+
+Package acronym Warning: Acronym `P/LZ' is not defined on input line 14.
+
 Package acronym Info: Label `acro:DMZ' newly defined as it shall be overridden
 although it is yet undefined on input line 14.
+
+Package acronym Warning: Acronym `DMZ' is not defined on input line 14.
+
+
+Package acronym Warning: Acronym `DMZ' is not defined on input line 14.
+
 Package acronym Info: Label `acro:ITS' newly defined as it shall be overridden
 although it is yet undefined on input line 14.
+
+Package acronym Warning: Acronym `ITS' is not defined on input line 14.
+
+
+Package acronym Warning: Acronym `ITS' is not defined on input line 14.
+
+
+Package acronym Warning: Acronym `ITS' is not defined on input line 15.
+
+
+Package acronym Warning: Acronym `P/LZ' is not defined on input line 15.
+
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 17.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1816,15 +1846,15 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 33.
 File: Bilder/logo_oszimt.png Graphic file (type png)
  <use Bilder/logo_oszimt.png>
-Package pdftex.def Info: Bilder/logo_oszimt.png used on input line 40.
+Package pdftex.def Info: Bilder/logo_oszimt.png used on input line 42.
 (pdftex.def)             Requested size: 61.72952pt x 18.36829pt.
 
 Overfull \vbox (10.95831pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 42.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 42.
 
 [2]
 Package babel Info: Redefining ngerman shorthand "|
@@ -1857,7 +1887,12 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 15.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 15.
- (Tabellen/ZeitplanungKurz.tex)
+
+
+LaTeX Warning: Reference `tab:Zeitplanung' on page 4 undefined on input line 18
+.
+
+(Tabellen/ZeitplanungKurz.tex)
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 21.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1926,25 +1961,29 @@ LaTeX Font Info:    Try loading font information for TS1+lmr on input line 35.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ts1lmr.fd"
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
+
+LaTeX Warning: Reference `tab:Kostenaufstellung' on page 6 undefined on input l
+ine 45.
+
 (Tabellen/Kostenaufstellung.tex)
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 49.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 49.
 File: Bilder/logo_oszimt.png Graphic file (type png)
  <use Bilder/logo_oszimt.png>
-Package pdftex.def Info: Bilder/logo_oszimt.png used on input line 55.
+Package pdftex.def Info: Bilder/logo_oszimt.png used on input line 47.
 (pdftex.def)             Requested size: 61.72952pt x 18.36829pt.
 
 Overfull \vbox (10.95831pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 55.
+(babel)             in language  on input line 47.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 55.
+(babel)             in language  on input line 47.
 
 [6]
 Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 49.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 49.
+Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 56.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 56.
@@ -1952,6 +1991,13 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 65.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 65.
+
+
+LaTeX Warning: Reference `app:UseCase' on page 7 undefined on input line 73.
+
+
+LaTeX Warning: Reference `app:UseCase' on page 7 undefined on input line 73.
+
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 76.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1960,115 +2006,8 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 81.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 81.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 91.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 91.
- (Tabellen/Analyse.tex)) (Inhalt/Entwurfsphase.tex
-File: Bilder/logo_oszimt.png Graphic file (type png)
-
-<use Bilder/logo_oszimt.png>
-Package pdftex.def Info: Bilder/logo_oszimt.png used on input line 2.
-(pdftex.def)             Requested size: 61.72952pt x 18.36829pt.
-
-Overfull \vbox (10.95831pt too high) has occurred while \output is active []
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 2.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 2.
-
-[7]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 2.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 2.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 8.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 8.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 18.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 18.
-
-
-Package natbib Warning: Citation `Symfony' on page 8 undefined on input line 26
-.
-
-(Tabellen/Nutzwert.tex)
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 31.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 31.
-File: Bilder/logo_oszimt.png Graphic file (type png)
- <use Bilder/logo_oszimt.png>
-Package pdftex.def Info: Bilder/logo_oszimt.png used on input line 35.
-(pdftex.def)             Requested size: 61.72952pt x 18.36829pt.
-
-Overfull \vbox (10.95831pt too high) has occurred while \output is active []
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 35.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 35.
-
-[8]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 43.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 43.
-
-Overfull \hbox (7.44104pt too wide) in paragraph at lines 47--48
-[]\T1/lmr/m/n/10.95 Entwurf/Beschreibung der Da-ten-struk-tu-ren ([] [][] un-d/
-o-der Ta-bel-len-mo-dell, [][]-Schemas)
- []
-
-Package acronym Info: Label `acro:ERM' newly defined as it shall be overridden
-although it is yet undefined on input line 51.
-<Bilder/ERDiagramm.pdf, id=553, 597.432pt x 314.776pt>
-File: Bilder/ERDiagramm.pdf Graphic file (type pdf)
-
-<use Bilder/ERDiagramm.pdf>
-Package pdftex.def Info: Bilder/ERDiagramm.pdf used on input line 55.
-(pdftex.def)             Requested size: 290.22821pt x 152.91592pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 61.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 61.
-Package acronym Info: Label `acro:EPK' newly defined as it shall be overridden
-although it is yet undefined on input line 65.
-
-Overfull \hbox (50.24269pt too wide) in paragraph at lines 65--66
-\T1/lmr/m/n/10.95 nen-ten-, Klassen-, Sequenz-, Da-ten-fluss-dia-gramm, Pro-gra
-m-ma-b-lauf-plan, Struk-to-gramm, [][][]Ereignisgesteuerte
- []
-
 File: Bilder/logo_oszimt.png Graphic file (type png)
 <use Bilder/logo_oszimt.png>
-Package pdftex.def Info: Bilder/logo_oszimt.png used on input line 66.
-(pdftex.def)             Requested size: 61.72952pt x 18.36829pt.
-
-Overfull \vbox (10.95831pt too high) has occurred while \output is active []
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 66.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 66.
-
-[9 <./Bilder/ERDiagramm.pdf>]
-<Bilder/netzplan.png, id=581, 843.90282pt x 596.2275pt>
-File: Bilder/netzplan.png Graphic file (type png)
-
-<use Bilder/netzplan.png>
-Package pdftex.def Info: Bilder/netzplan.png used on input line 76.
-(pdftex.def)             Requested size: 435.32947pt x 307.5655pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 82.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 82.
-File: Bilder/logo_oszimt.png Graphic file (type png)
- <use Bilder/logo_oszimt.png>
 Package pdftex.def Info: Bilder/logo_oszimt.png used on input line 87.
 (pdftex.def)             Requested size: 61.72952pt x 18.36829pt.
 
@@ -2079,133 +2018,136 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 87.
 
-[10 <./Bilder/netzplan.png>]
+[7]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 90.
+(babel)             in language  on input line 92.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 90.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 100.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 100.
- (Tabellen/Entwurf.tex))
-(Inhalt/Implementierungsphase.tex
+(babel)             in language  on input line 92.
+
+
+LaTeX Warning: Reference `tab:Analyse' on page 8 undefined on input line 92.
+
+(Tabellen/Analyse.tex)) (Inhalt/Entwurfsphase.tex
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 2.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 2.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 5.
+(babel)             in language  on input line 8.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 5.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 13.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 13.
+(babel)             in language  on input line 8.
 File: Bilder/logo_oszimt.png Graphic file (type png)
  <use Bilder/logo_oszimt.png>
-Package pdftex.def Info: Bilder/logo_oszimt.png used on input line 26.
+Package pdftex.def Info: Bilder/logo_oszimt.png used on input line 17.
 (pdftex.def)             Requested size: 61.72952pt x 18.36829pt.
 
 Overfull \vbox (10.95831pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 26.
+(babel)             in language  on input line 17.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 26.
+(babel)             in language  on input line 17.
 
-[11]
+[8]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 26.
+(babel)             in language  on input line 17.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 26.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 37.
+(babel)             in language  on input line 17.
+
+
+LaTeX Warning: Reference `fig:Netzplan' on page 9 undefined on input line 20.
+
+
+Package acronym Warning: Acronym `DMZ' is not defined on input line 21.
+
+<Bilder/PLZNetzplanProjektumgebung.png, id=391, 645.16031pt x 369.63094pt>
+File: Bilder/PLZNetzplanProjektumgebung.png Graphic file (type png)
+
+<use Bilder/PLZNetzplanProjektumgebung.png>
+Package pdftex.def Info: Bilder/PLZNetzplanProjektumgebung.png used on input li
+ne 24.
+(pdftex.def)             Requested size: 435.31674pt x 249.4055pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 30.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 30.
+
+
+LaTeX Warning: Reference `sec:Lastenheft' on page 9 undefined on input line 36.
+
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 38.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 38.
+File: Bilder/logo_oszimt.png Graphic file (type png)
+<use Bilder/logo_oszimt.png>
+Package pdftex.def Info: Bilder/logo_oszimt.png used on input line 46.
+(pdftex.def)             Requested size: 61.72952pt x 18.36829pt.
+
+Overfull \vbox (10.95831pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 46.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 46.
+
+[9 <./Bilder/PLZNetzplanProjektumgebung.png>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 74.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 74.
+
+
+LaTeX Warning: Reference `tab:Entwurf' on page 10 undefined on input line 74.
+
+(Tabellen/Entwurf.tex)) (Inhalt/Implementierungsphase.tex
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2.
+File: Bilder/logo_oszimt.png Graphic file (type png)
+
+<use Bilder/logo_oszimt.png>
+Package pdftex.def Info: Bilder/logo_oszimt.png used on input line 9.
+(pdftex.def)             Requested size: 61.72952pt x 18.36829pt.
+
+Overfull \vbox (10.95831pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 9.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 9.
+
+[10]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 9.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 9.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 14.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 14.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 17.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 40.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 40.
+Underfull \hbox (badness 10000) in paragraph at lines 18--20
 
-(Tabellen/Implementierung.tex)) (Inhalt/Abnahmephase.tex
+ []
+
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 2.
+(babel)             in language  on input line 21.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 2.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 14.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 14.
- (Tabellen/Abnahme.tex)) (Inhalt/Einfuehrungsphase.tex
+(babel)             in language  on input line 21.
+<Bilder/InsideRouterInt.png, id=404, 424.58624pt x 220.57407pt>
+File: Bilder/InsideRouterInt.png Graphic file (type png)
+
+<use Bilder/InsideRouterInt.png>
+Package pdftex.def Info: Bilder/InsideRouterInt.png used on input line 29.
+(pdftex.def)             Requested size: 435.34625pt x 226.16391pt.
 File: Bilder/logo_oszimt.png Graphic file (type png)
  <use Bilder/logo_oszimt.png>
-Package pdftex.def Info: Bilder/logo_oszimt.png used on input line 2.
-(pdftex.def)             Requested size: 61.72952pt x 18.36829pt.
-
-Overfull \vbox (10.95831pt too high) has occurred while \output is active []
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 2.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 2.
-
-[12]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 2.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 2.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 12.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 12.
- (Tabellen/Einfuehrung.tex)) (Inhalt/Dokumentation.tex
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 2.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 2.
-
-
-Package natbib Warning: Citation `phpDoc' on page 13 undefined on input line 12
-.
-
-File: Bilder/logo_oszimt.png Graphic file (type png)
-<use Bilder/logo_oszimt.png>
-Package pdftex.def Info: Bilder/logo_oszimt.png used on input line 14.
-(pdftex.def)             Requested size: 61.72952pt x 18.36829pt.
-
-Overfull \vbox (10.95831pt too high) has occurred while \output is active []
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 14.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 14.
-
-[13]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 14.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 14.
- (Tabellen/Dokumentation.tex)) (Inhalt/Fazit.tex
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 2.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 2.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 5.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 5.
- (Tabellen/Zeitnachher.tex)
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 20.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 20.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 28.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 28.
-File: Bilder/logo_oszimt.png Graphic file (type png)
-<use Bilder/logo_oszimt.png>
 Package pdftex.def Info: Bilder/logo_oszimt.png used on input line 33.
 (pdftex.def)             Requested size: 61.72952pt x 18.36829pt.
 
@@ -2216,7 +2158,170 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 33.
 
-[14]))
+[11]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 37.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 37.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 50.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 50.
+
+
+LaTeX Warning: Reference `sec:Einleitung' on page 12 undefined on input line 57
+.
+
+
+LaTeX Warning: Reference `sec:Einleitung' on page 12 undefined on input line 57
+.
+
+
+LaTeX Warning: Reference `app:CNMI' on page 12 undefined on input line 61.
+
+
+LaTeX Warning: Reference `app:CNMI' on page 12 undefined on input line 61.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 64.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 64.
+
+LaTeX Warning: Reference `tab:Implementierung' on page 12 undefined on input li
+ne 64.
+
+(Tabellen/Implementierung.tex)) (Inhalt/Abnahmephase.tex
+File: Bilder/logo_oszimt.png Graphic file (type png)
+
+<use Bilder/logo_oszimt.png>
+Package pdftex.def Info: Bilder/logo_oszimt.png used on input line 2.
+(pdftex.def)             Requested size: 61.72952pt x 18.36829pt.
+
+Overfull \vbox (10.95831pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2.
+
+[12 <./Bilder/InsideRouterInt.png>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2.
+
+
+LaTeX Warning: Reference `app:Test' on page 13 undefined on input line 11.
+
+
+LaTeX Warning: Reference `app:Test' on page 13 undefined on input line 11.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 14.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 14.
+
+LaTeX Warning: Reference `tab:Abnahme' on page 13 undefined on input line 14.
+
+(Tabellen/Abnahme.tex)) (Inhalt/Einfuehrungsphase.tex
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 12.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 12.
+
+
+LaTeX Warning: Reference `tab:Einfuehrung' on page 13 undefined on input line 1
+2.
+
+(Tabellen/Einfuehrung.tex)) (Inhalt/Dokumentation.tex
+File: Bilder/logo_oszimt.png Graphic file (type png)
+
+<use Bilder/logo_oszimt.png>
+Package pdftex.def Info: Bilder/logo_oszimt.png used on input line 2.
+(pdftex.def)             Requested size: 61.72952pt x 18.36829pt.
+
+Overfull \vbox (10.95831pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2.
+
+[13]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2.
+
+
+Package acronym Warning: Acronym `API' is not defined on input line 6.
+
+
+LaTeX Warning: Reference `app:BenutzerDoku' on page 14 undefined on input line 
+11.
+
+
+LaTeX Warning: Reference `app:BenutzerDoku' on page 14 undefined on input line 
+11.
+
+
+Package natbib Warning: Citation `phpDoc' on page 14 undefined on input line 12
+.
+
+
+LaTeX Warning: Reference `app:Doc' on page 14 undefined on input line 12.
+
+
+LaTeX Warning: Reference `app:Doc' on page 14 undefined on input line 12.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 14.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 14.
+
+LaTeX Warning: Reference `tab:Dokumentation' on page 14 undefined on input line
+ 14.
+
+(Tabellen/Dokumentation.tex)) (Inhalt/Fazit.tex
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 5.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 5.
+File: Bilder/logo_oszimt.png Graphic file (type png)
+ <use Bilder/logo_oszimt.png>
+Package pdftex.def Info: Bilder/logo_oszimt.png used on input line 10.
+(pdftex.def)             Requested size: 61.72952pt x 18.36829pt.
+
+Overfull \vbox (10.95831pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 10.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 10.
+
+[14]
+
+LaTeX Warning: Reference `tab:Vergleich' on page 15 undefined on input line 16.
+
+
+(Tabellen/Zeitnachher.tex)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 20.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 20.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 28.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 28.
+))
 File: Bilder/logo_oszimt.png Graphic file (type png)
  <use Bilder/logo_oszimt.png>
 Package pdftex.def Info: Bilder/logo_oszimt.png used on input line 74.
@@ -2286,7 +2391,11 @@ Package babel Info: Redefining ngerman shorthand "~
 
 [1
 
-])
+]
+
+Package acronym Warning: Acronym `SVN' is not defined on input line 25.
+
+)
 File: Bilder/logo_oszimt.png Graphic file (type png)
  <use Bilder/logo_oszimt.png>
 Package pdftex.def Info: Bilder/logo_oszimt.png used on input line 9.
@@ -2304,20 +2413,23 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 11.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 11.
- <Bilder/UseCase.pdf, id=688, 386.24298pt x 304.337pt>
-File: Bilder/UseCase.pdf Graphic file (type pdf)
 
-<use Bilder/UseCase.pdf>
+
+Package acronym Warning: Acronym `UML' is not defined on input line 13.
+
+<Bilder/UseCase.pdf, id=474, 386.24298pt x 304.337pt>
+File: Bilder/UseCase.pdf Graphic file (type pdf)
+ <use Bilder/UseCase.pdf>
 Package pdftex.def Info: Bilder/UseCase.pdf used on input line 16.
 (pdftex.def)             Requested size: 338.60417pt x 266.8004pt.
- (Anhang/AnhangPflichtenheft.tex
+
+(Anhang/AnhangPflichtenheft.tex
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
 File: Bilder/logo_oszimt.png Graphic file (type png)
-
-<use Bilder/logo_oszimt.png>
+ <use Bilder/logo_oszimt.png>
 Package pdftex.def Info: Bilder/logo_oszimt.png used on input line 15.
 (pdftex.def)             Requested size: 61.72952pt x 18.36829pt.
 
@@ -2331,8 +2443,14 @@ Package babel Info: Redefining ngerman shorthand "~
 [3
 
  <./Bilder/UseCase.pdf>]
+
+Package acronym Warning: Acronym `CSV' is not defined on input line 21.
+
+
+Package acronym Warning: Acronym `PHP' is not defined on input line 28.
+
 File: Bilder/logo_oszimt.png Graphic file (type png)
- <use Bilder/logo_oszimt.png>
+<use Bilder/logo_oszimt.png>
 Package pdftex.def Info: Bilder/logo_oszimt.png used on input line 50.
 (pdftex.def)             Requested size: 61.72952pt x 18.36829pt.
 
@@ -2348,10 +2466,15 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 22.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 22.
-File: Bilder/netzplan.png Graphic file (type png)
- <use Bilder/netzplan.png>
-Package pdftex.def Info: Bilder/netzplan.png used on input line 27.
-(pdftex.def)             Requested size: 483.70801pt x 341.74553pt.
+
+
+Package acronym Warning: Acronym `DMZ' is not defined on input line 24.
+
+File: Bilder/PLZNetzplanProjektumgebung.png Graphic file (type png)
+<use Bilder/PLZNetzplanProjektumgebung.png>
+Package pdftex.def Info: Bilder/PLZNetzplanProjektumgebung.png used on input li
+ne 27.
+(pdftex.def)             Requested size: 483.69183pt x 277.12099pt.
 File: Bilder/logo_oszimt.png Graphic file (type png)
  <use Bilder/logo_oszimt.png>
 Package pdftex.def Info: Bilder/logo_oszimt.png used on input line 30.
@@ -2370,21 +2493,21 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
 
-<Bilder/MockupModules.pdf, id=737, 722.7pt x 542.025pt>
+<Bilder/MockupModules.pdf, id=523, 722.7pt x 542.025pt>
 File: Bilder/MockupModules.pdf Graphic file (type pdf)
 
 <use Bilder/MockupModules.pdf>
 Package pdftex.def Info: Bilder/MockupModules.pdf used on input line 5.
 (pdftex.def)             Requested size: 338.58835pt x 253.94125pt.
 
-<Bilder/MockupModul.pdf, id=738, 722.7pt x 542.025pt>
+<Bilder/MockupModul.pdf, id=524, 722.7pt x 542.025pt>
 File: Bilder/MockupModul.pdf Graphic file (type pdf)
 
 <use Bilder/MockupModul.pdf>
 Package pdftex.def Info: Bilder/MockupModul.pdf used on input line 11.
 (pdftex.def)             Requested size: 338.58835pt x 253.94125pt.
 
-<Bilder/MockupTag.pdf, id=739, 722.7pt x 542.025pt>
+<Bilder/MockupTag.pdf, id=525, 722.7pt x 542.025pt>
 File: Bilder/MockupTag.pdf Graphic file (type pdf)
  <use Bilder/MockupTag.pdf>
 Package pdftex.def Info: Bilder/MockupTag.pdf used on input line 17.
@@ -2427,7 +2550,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
 
-<Bilder/tagliste.pdf, id=810, 597.432pt x 340.47202pt>
+<Bilder/tagliste.pdf, id=599, 597.432pt x 340.47202pt>
 File: Bilder/tagliste.pdf Graphic file (type pdf)
 
 <use Bilder/tagliste.pdf>
@@ -2448,7 +2571,7 @@ Package babel Info: Redefining ngerman shorthand "~
 [8
 
  <./Bilder/tagliste.pdf>]
-<Bilder/modulliste.pdf, id=909, 597.432pt x 505.087pt>
+<Bilder/modulliste.pdf, id=698, 597.432pt x 505.087pt>
 File: Bilder/modulliste.pdf Graphic file (type pdf)
 
 <use Bilder/modulliste.pdf>
@@ -2474,14 +2597,14 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
 
-<Bilder/doc.pdf, id=1075, page=1, 597.23125pt x 845.1575pt>
+<Bilder/doc.pdf, id=866, page=1, 597.23125pt x 845.1575pt>
 File: Bilder/doc.pdf Graphic file (type pdf)
 
 <use Bilder/doc.pdf, page 1>
 Package pdftex.def Info: Bilder/doc.pdf, page1 used on input line 4.
 (pdftex.def)             Requested size: 435.32422pt x 616.04424pt.
 
-<Bilder/doc.pdf, id=1076, page=2, 597.23125pt x 845.1575pt>
+<Bilder/doc.pdf, id=867, page=2, 597.23125pt x 845.1575pt>
 File: Bilder/doc.pdf Graphic file (type pdf)
 
 <use Bilder/doc.pdf, page 2>
@@ -2537,7 +2660,7 @@ Package babel Info: Redefining ngerman shorthand "~
 
 [12
 
-] <Bilder/testcase.jpg, id=1137, 773.89125pt x 334.24875pt>
+] <Bilder/testcase.jpg, id=929, 773.89125pt x 334.24875pt>
 File: Bilder/testcase.jpg Graphic file (type jpg)
 
 <use Bilder/testcase.jpg>
@@ -2594,7 +2717,11 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 45.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 45.
- <Bilder/Klassendiagramm.pdf, id=1275, 766.06201pt x 598.235pt>
+
+
+Package acronym Warning: Acronym `UML' is not defined on input line 47.
+
+<Bilder/Klassendiagramm.pdf, id=1068, 766.06201pt x 598.235pt>
 File: Bilder/Klassendiagramm.pdf Graphic file (type pdf)
 
 <use Bilder/Klassendiagramm.pdf>
@@ -2620,20 +2747,20 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
 
-<Bilder/weather-clear.png, id=1301, 22.0825pt x 22.0825pt>
+<Bilder/weather-clear.png, id=1095, 22.0825pt x 22.0825pt>
 <use Bilder/weather-clear.png> <use Bilder/weather-clear.png>
 <use Bilder/weather-clear.png>
-<Bilder/weather-clear-night.png, id=1302, 22.0825pt x 22.0825pt>
+<Bilder/weather-clear-night.png, id=1096, 22.0825pt x 22.0825pt>
 <use Bilder/weather-clear-night.png> <use Bilder/weather-clear-night.png>
 <use Bilder/weather-clear-night.png>
-<Bilder/weather-few-clouds-night.png, id=1303, 22.0825pt x 22.0825pt>
+<Bilder/weather-few-clouds-night.png, id=1097, 22.0825pt x 22.0825pt>
 <use Bilder/weather-few-clouds-night.png>
 <use Bilder/weather-few-clouds-night.png>
 <use Bilder/weather-few-clouds-night.png>
-<Bilder/weather-few-clouds.png, id=1304, 22.0825pt x 22.0825pt>
+<Bilder/weather-few-clouds.png, id=1098, 22.0825pt x 22.0825pt>
 <use Bilder/weather-few-clouds.png> <use Bilder/weather-few-clouds.png>
 <use Bilder/weather-few-clouds.png>
-<Bilder/weather-storm.png, id=1305, 22.0825pt x 22.0825pt>
+<Bilder/weather-storm.png, id=1099, 22.0825pt x 22.0825pt>
 <use Bilder/weather-storm.png> <use Bilder/weather-storm.png>
 <use Bilder/weather-storm.png> <use Bilder/weather-clear.png>
 <use Bilder/weather-clear.png> <use Bilder/weather-clear.png>
@@ -2742,14 +2869,21 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 86.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 86.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 86.
 Package rerunfilecheck Info: File `Projektdokumentation.out' has not changed.
-(rerunfilecheck)             Checksum: 924AAAAD8C9892BDD05D5ED93B7A1304;4774.
+(rerunfilecheck)             Checksum: 9531D07D46F1CEE7E38B6CE216F21608;4697.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 86.
  ) 
 Here is how much of TeX's memory you used:
- 26404 strings out of 493323
- 464349 string characters out of 3139043
- 739059 words of memory out of 3000000
- 28889 multiletter control sequences out of 15000+200000
+ 26337 strings out of 493323
+ 463759 string characters out of 3139043
+ 733573 words of memory out of 3000000
+ 28854 multiletter control sequences out of 15000+200000
  93193 words of font info for 67 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  76i,16n,80p,8988b,1979s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2770,9 +2904,9 @@ ri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/lm/lmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 public/lm/lmtt10.pfb>
-Output written on Projektdokumentation.pdf (40 pages, 2348208 bytes).
+Output written on Projektdokumentation.pdf (39 pages, 2286063 bytes).
 PDF statistics:
- 1455 PDF objects out of 1728 (max. 8388607)
- 380 named destinations out of 1000 (max. 500000)
- 649 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1244 PDF objects out of 1440 (max. 8388607)
+ 358 named destinations out of 1000 (max. 500000)
+ 641 words of extra memory for PDF output out of 10000 (max. 10000000)
 

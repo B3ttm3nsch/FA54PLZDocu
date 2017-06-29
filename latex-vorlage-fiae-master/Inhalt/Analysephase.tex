@@ -9,7 +9,7 @@ Im Nachfolgenden verzichten wir auf einen Großteil der üblichen Berechnungen z
 \label{sec:IstAnalyse}
 
 	% Wie ist die bisherige Situation (\zB bestehende Programme, Wünsche der Mitarbeiter)?
-\paragraph*{Was ist vorhanden: } Im Labor sind für jedes Gruppenmitglied vorhanden: ein Bildschirmarbeitzplatz, Windows 7, Adminrechte, zwei physikalische Netzwerkinterfaces, Anschluß an Labornetzwerk und Internet, die Software VMWare Player, Debian Images auf einem Netzlaufwerk.
+\paragraph*{Was ist vorhanden: } Im Labor sind für jedes Gruppenmitglied vorhanden: ein Bildschirmarbeitzplatz, Windows 7, Adminrechte, zwei physikalische Netzwerkinterfaces, Anschluß an Labornetzwerk und Internet, die Software VMWare Player, Debian Images auf einem Netzlaufwerk sowie ein Webserver.
     
 	% Was gilt es zu erstellen/verbessern?
     \textbf{Was ist zu erstellen:}\\
@@ -56,10 +56,10 @@ Eine Aufstellung der Kosten befindet sich in Tabelle~\ref{tab:Kostenaufstellung}
 \subsection{Nutzwertanalyse}
 \label{sec:Nutzwertanalyse}
 	% Darstellung des nicht-monetären Nutzens (\zB Vorher-/Nachher-Vergleich anhand eines Wirtschaftlichkeitskoeffizienten). 
-    \dots
+Durch den Aufbau einer DMZ können wir die Zugriffe auf unsere Server, in diesem Fall ein einfacher Webserver, von Außen und Innen reglementieren. So wird über den Routern mit einer konfigurierten Firewall ein sicherer Zugang zu unserem Webserver ermöglicht. Die Aufteilung in unterschiedliche Netzwerke ermöglicht den Administratoren eine einfachere Verwaltung der Berechtigungen für die Mitglieder des Firmennetzes.
 
-\paragraph{Beispiel}
-Ein Beispiel für eine Entscheidungsmatrix findet sich in Kapitel~\ref{sec:Architekturdesign}: \nameref{sec:Architekturdesign}.
+%\paragraph{Beispiel}
+%Ein Beispiel für eine Entscheidungsmatrix findet sich in Kapitel~\ref{sec:Architekturdesign}: \nameref{sec:Architekturdesign}.
 
 
 \subsection{Anwendungsfälle}
@@ -76,16 +76,17 @@ Ein Beispiel für ein Use Case-Diagramm findet sich im \Anhang{app:UseCase}.
 \subsection{Qualitätsanforderungen}
 \label{sec:Qualitaetsanforderungen}
 	% Welche Qualitätsanforderungen werden an die Anwendung gestellt (\zB hinsichtlich Performance, Usability, Effizienz \etc (siehe \citet{ISO9126}))?
-    \dots
+Der Webserver soll von Außen (über die öffentliche IP des Outside-Routers) und Innen erreichbar, aber vor potentiellen Angreifern bestmöglich mit den zur Verfügung stehenden Mitteln geschützt sein. Es muss sichergestellt werden, dass kein unberechtigter Dritter Zugriff auf die Geräte und deren Konfiguration hat. Dabei ist darauf zu achten, dass die Mitarbeiter weiterhin wie gewohnt Zugriff auf das Internet und den Webserver haben.
 
-\subsection{Lastenheft/Fachkonzept}
+\subsection{Fachkonzept}
 \label{sec:Lastenheft}
 	% Auszüge aus dem Lastenheft/Fachkonzept, wenn es im Rahmen des Projekts erstellt wurde.
-    \dots
 	% Mögliche Inhalte: Funktionen des Programms (Muss/Soll/Wunsch), User Stories, Benutzerrollen
-    \dots
 
-\paragraph{Beispiel}
-Ein Beispiel für ein Lastenheft findet sich im \Anhang{app:Lastenheft}. 
+\paragraph*{Die Mitarbeiter } sollen untereinander, mit dem Webserver und dem Internet kommunizieren können, dabei jedoch bestmöglich geschützt werden.
+\paragraph*{Die Administrator } sollen zusätzlich die Möglichkeit haben, die Server und Router aus der Ferne zu warten. Dabei sollte es unerheblich sein, wie viele Clients und Server sich im internen bzw.\ DMZ-Netz befinden.
+
+%\paragraph{Beispiel}
+%Ein Beispiel für ein Lastenheft findet sich im \Anhang{app:Lastenheft}. 
 
 \Zwischenstand{Analysephase}{Analyse}

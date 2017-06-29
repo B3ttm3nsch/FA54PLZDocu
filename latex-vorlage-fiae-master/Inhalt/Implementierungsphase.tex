@@ -2,25 +2,49 @@
 \section{Implementierungsphase} 
 \label{sec:Implementierungsphase}
 
-\subsection{Implementierung der Datenstrukturen}
-\label{sec:ImplementierungDatenstrukturen}
+\dots
 
-\begin{itemize}
-	\item Beschreibung der angelegten Datenbank (\zB Generierung von \acs{SQL} aus Modellierungswerkzeug oder händisches Anlegen), \acs{XML}-Schemas \usw.
-\end{itemize}
+%\noindent\hspace*{42mm}%
+
+\subsection{Implementierung der Virtuellen Maschinen}
+\label{subsec:ImplementierungVMs}
+Eine Debian Distribution als virtuelle Maschine ist bereits auf beiden Rechnern vorhanden. Diese wird kopiert und dann mit dem VMWare Player gestartet. Wir überbrücken die physischen Netzwerkadapter der Windows Hosts auf die virtuellen Adapter der Linux Distribution. So haben die designierten Router über die physischen Interfaces Zugriff auf das Netzwerk. 
 
 
-\subsection{Implementierung der Benutzeroberfläche}
-\label{sec:ImplementierungBenutzeroberflaeche}
+\subsection{Konfiguration der Router}
+\label{subsec:KonfigurationRouter}
 
-\begin{itemize}
-	\item Beschreibung der Implementierung der Benutzeroberfläche, falls dies separat zur Implementierung der Geschäftslogik erfolgt (\zB bei \acs{HTML}-Oberflächen und Stylesheets).
-	\item \Ggfs Beschreibung des Corporate Designs und dessen Umsetzung in der Anwendung.
-	\item Screenshots der Anwendung
-\end{itemize}
+Über dem VMWare Player auf den Windows Hosts verbinden wir uns auf die Router und können diese dann über das Terminal konfigurieren. Die Passwörter, die wir vom Kunden erhalten haben, lassen wir unverändert. Als erstes werden die Hostnamen angepasst. Dazu ersetzt man den alten Namen in den Dateien \texttt{/etc/hostname} und \texttt{/etc/hosts}. Danach sollte die Maschine neu gestartet werden.
+\subparagraph*{} Diese und alle weiteren von uns benötigten Dateien lassen sich über einen vorinstallierten Editor öffnen und bearbeiten, z.\ B.\ mit vi:\\\\
+\noindent\hspace*{42mm} \texttt{vi /etc/hostname}.
 
-\paragraph{Beispiel}
-Screenshots der Anwendung in der Entwicklungsphase mit Dummy-Daten befinden sich im \Anhang{Screenshots}.
+\subsubsection{Konfiguration der Interfaces}
+\label{subsubsec:KonfigurationInsideRouterInt}
+Für die Konfiguration der Interfaces halten wir uns an den erstellten Netzplan (Siehe ??).
+Um die Interfaces zu konfigurieren, wird Datei \texttt{/etc/network/interfaces} geöffnet.
+
+\paragraph*{Inside-Router} Für den Inside-Router tragen wir als Gateway das Interface des Outside-Routers, welches sich in der DMZ befinden soll, ein.
+\begin{figure}[htb]
+\centering
+\includegraphicsKeepAspectRatio{InsideRouterInt.png}{0.9}
+\caption{Interface-Konfiguration des Inside-Routers}
+\label{fig:InsideRouterInt}
+\end{figure}
+
+\label{sec:ImplementierungOutRouterInt}
+Der Inside-Router erhält als Gateway die IP-Adresse des Interfaces vom Outside-Router, welches in der DMZ ist.
+
+\subsubsection{Interface des Inside-Router}
+\label{sec:ImplementierungOutRouterInt}
+
+%\begin{itemize}
+%	\item Beschreibung der Implementierung der Benutzeroberfläche, falls dies separat zur Implementierung der Geschäftslogik erfolgt (\zB bei \acs{HTML}-Oberflächen und Stylesheets).
+%	\item \Ggfs Beschreibung des Corporate Designs und dessen Umsetzung in der Anwendung.
+%	\item Screenshots der Anwendung
+%\end{itemize}
+
+%\paragraph{Beispiel}
+%Screenshots der Anwendung in der Entwicklungsphase mit Dummy-Daten befinden sich im \Anhang{Screenshots}.
 
 
 \subsection{Implementierung der Geschäftslogik}
