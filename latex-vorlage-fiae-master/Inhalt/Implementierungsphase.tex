@@ -17,25 +17,40 @@ Eine Debian Distribution als virtuelle Maschine ist bereits auf beiden Rechnern 
 Über dem VMWare Player auf den Windows Hosts verbinden wir uns auf die Router und können diese dann über das Terminal konfigurieren. Die Passwörter, die wir vom Kunden erhalten haben, lassen wir unverändert. Als erstes werden die Hostnamen angepasst. Dazu ersetzt man den alten Namen in den Dateien \texttt{/etc/hostname} und \texttt{/etc/hosts}. Danach sollte die Maschine neu gestartet werden.
 \subparagraph*{} Diese und alle weiteren von uns benötigten Dateien lassen sich über einen vorinstallierten Editor öffnen und bearbeiten, z.\ B.\ mit vi:\\\\
 \noindent\hspace*{42mm} \texttt{vi /etc/hostname}.
+\subparagraph*{} Nach jeder vorgenommen Konfiguration wird diese getestet und ggf.\ angepasst.
 
 \subsubsection{Konfiguration der Interfaces}
 \label{subsubsec:KonfigurationInsideRouterInt}
 Für die Konfiguration der Interfaces halten wir uns an den erstellten Netzplan (Siehe ??).
-Um die Interfaces zu konfigurieren, wird Datei \texttt{/etc/network/interfaces} geöffnet.
+Um die Interfaces zu konfigurieren, wird die Datei \texttt{/etc/network/interfaces} geöffnet.
 
-\paragraph*{Inside-Router} Für den Inside-Router tragen wir als Gateway das Interface des Outside-Routers, welches sich in der DMZ befinden soll, ein.
-\begin{figure}[htb]
-\centering
-\includegraphicsKeepAspectRatio{InsideRouterInt.png}{0.9}
-\caption{Interface-Konfiguration des Inside-Routers}
-\label{fig:InsideRouterInt}
-\end{figure}
+\paragraph*{Inside-Router} Für den Inside-Router tragen wir neben den IP-Adressen seiner Schnittstellen als Standard-Gateway das Interface des Outside-Routers ein, welsches sich in der DMZ befinden soll. (Siehe Anhang InideRouterInt.png)
 
-\label{sec:ImplementierungOutRouterInt}
-Der Inside-Router erhält als Gateway die IP-Adresse des Interfaces vom Outside-Router, welches in der DMZ ist.
+\paragraph*{Outside-Router} Der Outside-Router erhält zusätlich zu seinen IP-Adressen als Gateway die IP-Adresse 192.168.200.1 (Standard-Gateway Labornetz). (Siehe Anhang OutsideRouterInt.png)
 
-\subsubsection{Interface des Inside-Router}
-\label{sec:ImplementierungOutRouterInt}
+\subsubsection{Konfiguration der statischen Routern}
+\label{subsubsec:KonfigurationStatischeRouten}
+Wir benötigen zwei statische Routen auf dem Outside-Router, eine für die DMZ und eine für das LAN. (Siehe Anhang OuutsideRouterInt.png)
+
+\subsubsection{Konfiguration von NAT und Port-Forwarding}
+\label{subsubsec:KonfigurationNAT}
+Weiterhin konfigurieren wir in der "interfaces" Datei vom Outside-Router NAT für die DMZ und das LAN sowie Port-Forwarding zu unserem Webserver ein. (Siehe Anhang OuutsideRouterInt.png)
+Um jedoch NAT und Port-Forwarding auf beiden Routern nutzen zu können, müssen wir dies erst aktivieren. Dies geschieht mit dem Befehl
+\verb+echo 1 > /proc/sys/net/ipv4/ip_forward}+.
+
+\subparagraph*{}  Dies ist jedoch nur eine temporäre Losung und geht nach einem Neustart verloren. Damit der Prozess mit dem Systemstart geladen wird, tragen wir (, nachdem unsere Tests erfolgreich waren, ) setzen wir den Wert in der Datei \texttt{/etc/sysctl.conf} von  \verb+#net.ipv4.ip_forward+ auf \verb+1+ und kommentieren diese Zeile aus.
+
+\subsubsection{Konfiguration des DNS-Server}
+\label{subsubsec:KonfigurationDNS}
+In der Datei \verb+/etc/resolv.conf+ tragen wir für beide die IP-Adresse der von unserem Auftraggeber bereitgestellten DNS-Server ein.
+\begin{verbatim}
+nameserver 192.168.200.40
+nameserver 192.168.200.41
+\end{verbatim}
+
+\subsubsection{Konfiguration des Zeitserver}
+\label{subsubsec:KonfigurationNTP}
+Um einen Zeitserver angeben und nutzen zu können, installieren wir mit \verb+apt-get install ntp+ den ntp-Dienst. Danach fügen wir die IP-Adresse des bereitgestellten NTP-Servers (Standard-Gateway) in die Datei \verb+/etc/ntp..conf+ ein: \verb+server 192.168.200.1 iburst+. (Siehe NTP.conf)
 
 %\begin{itemize}
 %	\item Beschreibung der Implementierung der Benutzeroberfläche, falls dies separat zur Implementierung der Geschäftslogik erfolgt (\zB bei \acs{HTML}-Oberflächen und Stylesheets).
