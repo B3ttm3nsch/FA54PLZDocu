@@ -1,7 +1,2 @@
-<<<<<<< HEAD
-\contentsline {lstlisting}{Listings/tests.php}{xii}{lstlisting.169}
-\contentsline {lstlisting}{Listings/cnmi.php}{xiii}{lstlisting.205}
-=======
-\contentsline {lstlisting}{Listings/tests.php}{xvii}{lstlisting.162}
-\contentsline {lstlisting}{Listings/cnmi.php}{xviii}{lstlisting.198}
->>>>>>> master
+\contentsline {lstlisting}{Listings/outside/firewall.sh}{xii}{lstlisting.162}
+\contentsline {lstlisting}{Listings/inside/firewall.sh}{xx}{lstlisting.557}
