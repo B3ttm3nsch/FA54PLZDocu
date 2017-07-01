@@ -2,7 +2,7 @@
 \section{Implementierungsphase} 
 \label{sec:Implementierungsphase}
 
-\dots
+\dots immer testen usw.
 
 %\noindent\hspace*{42mm}%
 
@@ -17,7 +17,6 @@ Eine Debian Distribution als virtuelle Maschine ist bereits auf beiden Rechnern 
 Über dem VMWare Player auf den Windows Hosts verbinden wir uns auf die Router und können diese dann über das Terminal konfigurieren. Die Passwörter, die wir vom Kunden erhalten haben, lassen wir unverändert. Als erstes werden die Hostnamen angepasst. Dazu ersetzt man den alten Namen in den Dateien \texttt{/etc/hostname} und \texttt{/etc/hosts}. Danach sollte die Maschine neu gestartet werden.
 \subparagraph*{} Diese und alle weiteren von uns benötigten Dateien lassen sich über einen vorinstallierten Editor öffnen und bearbeiten, z.\ B.\ mit vi:\\\\
 \noindent\hspace*{42mm} \texttt{vi /etc/hostname}.
-\subparagraph*{} Nach jeder vorgenommen Konfiguration wird diese getestet und ggf.\ angepasst.
 
 \subsubsection{Konfiguration der Interfaces}
 \label{subsubsec:KonfigurationInsideRouterInt}
@@ -51,6 +50,17 @@ nameserver 192.168.200.41
 \subsubsection{Konfiguration des Zeitserver}
 \label{subsubsec:KonfigurationNTP}
 Um einen Zeitserver angeben und nutzen zu können, installieren wir mit \verb+apt-get install ntp+ den ntp-Dienst. Danach fügen wir die IP-Adresse des bereitgestellten NTP-Servers (Standard-Gateway) in die Datei \verb+/etc/ntp..conf+ ein: \verb+server 192.168.200.1 iburst+. (Siehe NTP.conf)
+
+
+
+\subsection{Implementierung der physischen Hosts}
+\label{subsec:ImplementierungHosts}
+Bevor die Schnittstellen auf die Router angepasst werden, werden noch evtl.\ benötigte Dateien und Programme (notepad++, putty, winscp) heruntergeladen. Im Gegensatz zu Router-Konfiguration wird hier fast ausschließlich mit der GUI gearbeitet
+
+\subsubsection{Konfiguration der Interfaces}
+\label{subsubsec:KonfigurationHostInt}
+Für die IP-Adressierung halten wir uns ebenfalls an den Netzplan(Siehe Netzplan Produktionsumgebung).
+
 
 %\begin{itemize}
 %	\item Beschreibung der Implementierung der Benutzeroberfläche, falls dies separat zur Implementierung der Geschäftslogik erfolgt (\zB bei \acs{HTML}-Oberflächen und Stylesheets).
