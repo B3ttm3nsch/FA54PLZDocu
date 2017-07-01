@@ -43,6 +43,7 @@
 \contentsline {subsubsection}{\numberline {5.2.4}Konfiguration des DNS-Server}{12}{subsubsection.88}
 \contentsline {subsection}{\numberline {5.3}Implementierung der Gesch\IeC {\"a}ftslogik}{13}{subsection.89}
 \contentsline {paragraph}{\nonumberline Beispiel}{13}{section*.90}
+<<<<<<< HEAD
 \contentsline {subsection}{\numberline {5.4}Zwischenstand}{13}{subsection.91}
 \contentsline {section}{\numberline {6}Abnahmephase}{13}{section.93}
 \contentsline {paragraph}{\nonumberline Beispiel}{13}{section*.94}
@@ -71,3 +72,32 @@
 \contentsline {subsection}{\numberline {A.10}Klasse: ComparedNaturalModuleInformation}{xiii}{subsection.194}
 \contentsline {subsection}{\numberline {A.11}Klassendiagramm}{xvi}{subsection.318}
 \contentsline {subsection}{\numberline {A.12}Benutzerdokumentation}{xvii}{subsection.320}
+=======
+\contentsline {subsection}{\numberline {6.1}Zwischenstand}{13}{subsection.91}
+\contentsline {section}{\numberline {7}Einf\IeC {\"u}hrungsphase}{13}{section.93}
+\contentsline {subsection}{\numberline {7.1}Zwischenstand}{14}{subsection.94}
+\contentsline {section}{\numberline {8}Dokumentation}{14}{section.96}
+\contentsline {paragraph}{\nonumberline Beispiel}{14}{section*.97}
+\contentsline {subsection}{\numberline {8.1}Zwischenstand}{14}{subsection.99}
+\contentsline {section}{\numberline {9}Fazit}{15}{section.101}
+\contentsline {subsection}{\numberline {9.1}Soll-/Ist-Vergleich}{15}{subsection.102}
+\contentsline {paragraph}{\nonumberline Beispiel (verk\IeC {\"u}rzt)}{15}{section*.103}
+\contentsline {subsection}{\numberline {9.2}Lessons Learned}{15}{subsection.105}
+\contentsline {subsection}{\numberline {9.3}Ausblick}{15}{subsection.106}
+\contentsline {section}{\nonumberline Literaturverzeichnis}{16}{section*.107}
+\contentsline {section}{\nonumberline Eidesstattliche Erkl\IeC {\"a}rung}{17}{section*.108}
+\contentsline {section}{\numberline {A}Anhang}{i}{appendix.109}
+\contentsline {subsection}{\numberline {A.1}Schritt-f\IeC {\"u}r-Schritt Anleitung}{i}{subsection.110}
+\contentsline {subsection}{\numberline {A.2}Detaillierte Zeitplanung}{vi}{subsection.111}
+\contentsline {subsection}{\numberline {A.3}Lastenheft (Auszug)}{vii}{subsection.112}
+\contentsline {subsection}{\numberline {A.4}Use Case-Diagramm}{viii}{subsection.131}
+\contentsline {subsection}{\numberline {A.5}Pflichtenheft (Auszug)}{viii}{subsection.133}
+\contentsline {subsection}{\numberline {A.6}Netzplan}{x}{subsection.146}
+\contentsline {subsection}{\numberline {A.7}Oberfl\IeC {\"a}chenentw\IeC {\"u}rfe}{xi}{subsection.148}
+\contentsline {subsection}{\numberline {A.8}Screenshots der Anwendung}{xiii}{subsection.152}
+\contentsline {subsection}{\numberline {A.9}Entwicklerdokumentation}{xv}{subsection.155}
+\contentsline {subsection}{\numberline {A.10}Testfall und sein Aufruf auf der Konsole}{xvii}{subsection.156}
+\contentsline {subsection}{\numberline {A.11}Klasse: ComparedNaturalModuleInformation}{xviii}{subsection.192}
+\contentsline {subsection}{\numberline {A.12}Klassendiagramm}{xxi}{subsection.316}
+\contentsline {subsection}{\numberline {A.13}Benutzerdokumentation}{xxii}{subsection.318}
+>>>>>>> tex_formating

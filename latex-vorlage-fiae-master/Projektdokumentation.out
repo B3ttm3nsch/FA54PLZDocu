@@ -36,6 +36,7 @@
 \BOOKMARK [1][-]{section.77}{5 Implementierungsphase}{}% 36
 \BOOKMARK [2][-]{subsection.78}{5.1 Implementierung der Virtuellen Maschinen}{section.77}% 37
 \BOOKMARK [2][-]{subsection.79}{5.2 Konfiguration der Router}{section.77}% 38
+<<<<<<< HEAD
 \BOOKMARK [3][-]{subsubsection.82}{5.2.1 Konfiguration der Interfaces}{subsection.79}% 39
 \BOOKMARK [3][-]{subsubsection.85}{5.2.2 Konfiguration der statischen Routern}{subsection.79}% 40
 \BOOKMARK [3][-]{subsubsection.86}{5.2.3 Konfiguration von NAT und Port-Forwarding}{subsection.79}% 41
@@ -66,3 +67,35 @@
 \BOOKMARK [2][-]{subsection.194}{A.10 Klasse: ComparedNaturalModuleInformation}{appendix.112}% 66
 \BOOKMARK [2][-]{subsection.318}{A.11 Klassendiagramm}{appendix.112}% 67
 \BOOKMARK [2][-]{subsection.320}{A.12 Benutzerdokumentation}{appendix.112}% 68
+=======
+\BOOKMARK [3][-]{subsubsection.81}{5.2.1 Konfiguration der Interfaces}{subsection.79}% 39
+\BOOKMARK [3][-]{subsubsection.84}{5.2.2 Interface des Inside-Router}{subsection.79}% 40
+\BOOKMARK [2][-]{subsection.85}{5.3 Implementierung der Gesch\344ftslogik}{section.77}% 41
+\BOOKMARK [2][-]{subsection.87}{5.4 Zwischenstand}{section.77}% 42
+\BOOKMARK [1][-]{section.89}{6 Abnahmephase}{}% 43
+\BOOKMARK [2][-]{subsection.91}{6.1 Zwischenstand}{section.89}% 44
+\BOOKMARK [1][-]{section.93}{7 Einf\374hrungsphase}{}% 45
+\BOOKMARK [2][-]{subsection.94}{7.1 Zwischenstand}{section.93}% 46
+\BOOKMARK [1][-]{section.96}{8 Dokumentation}{}% 47
+\BOOKMARK [2][-]{subsection.99}{8.1 Zwischenstand}{section.96}% 48
+\BOOKMARK [1][-]{section.101}{9 Fazit}{}% 49
+\BOOKMARK [2][-]{subsection.102}{9.1 Soll-/Ist-Vergleich}{section.101}% 50
+\BOOKMARK [2][-]{subsection.105}{9.2 Lessons Learned}{section.101}% 51
+\BOOKMARK [2][-]{subsection.106}{9.3 Ausblick}{section.101}% 52
+\BOOKMARK [1][-]{section*.107}{Literaturverzeichnis}{}% 53
+\BOOKMARK [1][-]{section*.108}{Eidesstattliche Erkl\344rung}{}% 54
+\BOOKMARK [1][-]{appendix.109}{A Anhang}{}% 55
+\BOOKMARK [2][-]{subsection.110}{A.1 Schritt-f\374r-Schritt Anleitung}{appendix.109}% 56
+\BOOKMARK [2][-]{subsection.111}{A.2 Detaillierte Zeitplanung}{appendix.109}% 57
+\BOOKMARK [2][-]{subsection.112}{A.3 Lastenheft \(Auszug\)}{appendix.109}% 58
+\BOOKMARK [2][-]{subsection.131}{A.4 Use Case-Diagramm}{appendix.109}% 59
+\BOOKMARK [2][-]{subsection.133}{A.5 Pflichtenheft \(Auszug\)}{appendix.109}% 60
+\BOOKMARK [2][-]{subsection.146}{A.6 Netzplan}{appendix.109}% 61
+\BOOKMARK [2][-]{subsection.148}{A.7 Oberfl\344chenentw\374rfe}{appendix.109}% 62
+\BOOKMARK [2][-]{subsection.152}{A.8 Screenshots der Anwendung}{appendix.109}% 63
+\BOOKMARK [2][-]{subsection.155}{A.9 Entwicklerdokumentation}{appendix.109}% 64
+\BOOKMARK [2][-]{subsection.156}{A.10 Testfall und sein Aufruf auf der Konsole}{appendix.109}% 65
+\BOOKMARK [2][-]{subsection.192}{A.11 Klasse: ComparedNaturalModuleInformation}{appendix.109}% 66
+\BOOKMARK [2][-]{subsection.316}{A.12 Klassendiagramm}{appendix.109}% 67
+\BOOKMARK [2][-]{subsection.318}{A.13 Benutzerdokumentation}{appendix.109}% 68
+>>>>>>> tex_formating
