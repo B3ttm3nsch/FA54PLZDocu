@@ -84,6 +84,7 @@ Die IP des Zeit-Server tragen wir in den "Datum und Uhrzeiteinstellungen" unter 
 \label{subsec:KonfigurationFirewall}
 Dass durch den Auftraggeber vorgegebene Script wird entsprechend der in sich befindlichen Vorlage auf beiden Routern angepasst und die DMZ somit von beiden Seiten abgeschottet. Entsprechend des übergebenen Parameters (\verb+start+, \verb+stop+) wird das BASH-Script gestartet bzw.\ geschlossen.
 \subparagraph*{} Wird die Outside-Firewall gestoppt, existiert eine uneingeschränkte Verbindung zwischen dem Labornetz und der DMZ. Das interne Netz ist weiterhin durch den Inside-Router geschützt. Ist die Inside-Firewall gestoppt, sind die Netze weiterhin durch den Outside-Router geschützt. Der Inside-Router ist nun jedoch aus dem internen Netz frei erreichbar.
+\subparagraph*{} Des weiteren schreibt loggt die Firewall die, wann Sie gestartet / gestoppt und wie ihre Einstellungen zum derzeitigen Stand sind / waren. Das Log-File befindet sich im Ordner \verb+/var/log/firewall/firewallConfig+.
 \subparagraph*{}  Genauere Angaben finden sich im angefügten Firewall-Script.
 
 %\begin{itemize}
