@@ -61,31 +61,20 @@ Durch den Aufbau einer DMZ können wir die Zugriffe auf unsere Server, in diesem
 %Ein Beispiel für eine Entscheidungsmatrix findet sich in Kapitel~\ref{sec:Architekturdesign}: \nameref{sec:Architekturdesign}.
 
 
-\subsection{Anwendungsfälle}
-\label{sec:Anwendungsfaelle}
-	% Welche Anwendungsfälle soll das Projekt abdecken?
-    \dots
-	% Einer oder mehrere interessante (!) Anwendungsfälle könnten exemplarisch durch ein Aktivitätsdiagramm oder eine \ac{EPK} detailliert beschrieben werden. 
-    \dots
-
-\paragraph{Beispiel}
-Ein Beispiel für ein Use Case-Diagramm findet sich im \Anhang{app:UseCase}.
-
-
 \subsection{Qualitätsanforderungen}
 \label{sec:Qualitaetsanforderungen}
 	% Welche Qualitätsanforderungen werden an die Anwendung gestellt (\zB hinsichtlich Performance, Usability, Effizienz \etc (siehe \citet{ISO9126}))?
 Der Webserver soll von Außen (über die öffentliche IP des Outside-Routers) und Innen erreichbar, aber vor potentiellen Angreifern bestmöglich mit den zur Verfügung stehenden Mitteln geschützt sein. Es muss sichergestellt werden, dass kein unberechtigter Dritter Zugriff auf die Geräte und deren Konfiguration hat. Dabei ist darauf zu achten, dass die Mitarbeiter weiterhin wie gewohnt Zugriff auf das Internet und den Webserver haben.
 
-\subsection{Fachkonzept}
+\subsection{Lastenheft}
 \label{sec:Lastenheft}
 	% Auszüge aus dem Lastenheft/Fachkonzept, wenn es im Rahmen des Projekts erstellt wurde.
 	% Mögliche Inhalte: Funktionen des Programms (Muss/Soll/Wunsch), User Stories, Benutzerrollen
 
-\paragraph*{Die Mitarbeiter } sollen untereinander, mit dem Webserver und dem Internet kommunizieren können, dabei jedoch bestmöglich geschützt werden.
-\paragraph*{Die Administrator } sollen zusätzlich die Möglichkeit haben, die Server und Router aus der Ferne zu warten. Dabei sollte es unerheblich sein, wie viele Clients und Server sich im internen bzw.\ DMZ-Netz befinden.
+\paragraph*{Die Mitarbeiter} sollen untereinander, mit dem Webserver und dem Internet kommunizieren können, dabei jedoch bestmöglich geschützt werden.
+\paragraph*{Die Administrator} sollen zusätzlich die Möglichkeit haben, die Server und Router aus der Ferne zu warten. Dabei sollte es unerheblich sein, wie viele Clients und Server sich im internen bzw.\ DMZ-Netz befinden.
 
 %\paragraph{Beispiel}
-%Ein Beispiel für ein Lastenheft findet sich im \Anhang{app:Lastenheft}. 
+Eine genauere Auflistung der Anforderungen findet sich im \Anhang{app:Lastenheft}. 
 
 \Zwischenstand{Analysephase}{Analyse}
