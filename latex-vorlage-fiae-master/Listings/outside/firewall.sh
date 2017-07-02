@@ -6,7 +6,7 @@
 # ======================================================
 
 # 1. Datei in "firewall.sh" umbenennen
-# 2. Datei ausführbar machen: Auf der Kommandozeile das Skript starten mit: ./firewall.sh  ENTER
+# 2. Datei ausfuehrbar machen: Auf der Kommandozeile das Skript starten mit: ./firewall.sh  ENTER
 # 3. Wenn Fehlermeldung (das Skript laeuft gar nicht) Konvertierung mit "dos2unix Dateiname"
 #------------Aufgabenstellung-------------------------------------------------
 # 1.Passen Sie dieses Firewall-Skript an die folgende Aufgabenstellung an.
@@ -14,14 +14,14 @@
 #	a) 	Jeder Rechner (Webserver, Host, zwei Linux-Router) Ihrer Arbeitsgruppe muss die eigene Zeit mit einem Zeitserver 
 #		synchronisieren koennen. Nehmen Sie auf jeden Fall den schulinternen Zeitserver (Standardgateway:192.168.200.1), da die 
 #		externen evt. nicht erreichbar sind. 
-#	b) Ihr Webserver soll von überall (eigenes LAN und fremde Netzwerke) nur auf Port 80 erreichbar sein. 
+#	b) Ihr Webserver soll von ueberall (eigenes LAN und fremde Netzwerke) nur auf Port 80 erreichbar sein. 
 #	c) Ping (echo-request) soll fuer alle Rechner des eigenen Netzes (Intern) erlaubt sein und auch echo-reply Antworten 
 #		aus dem Inernet erhalten. (z.B. ping 141.1.1.1, ping 8.8.8.8)
 #	d) Die Wartung der Linux Router mittels 'ssh' soll nur von einem ausgezeichneten Rechner Ihres eigenen LANs erlaubt sein.
 #	   Die Linux-Router sind vor allen anderen Zugriffen zu schuetzen!!
 #	e) Der/die Rechner des eigenen LANs sollen per "http" in das Internet (google, gmx etc.) kommen koennen.
 #	f) Die "Default Policy" der Firewalls muss auf "DROP" stehen. (Alles was nicht explizit erlaubt ist, ist verboten!!)
-#	g) Darueber hinaus lassen Sie sich in Ihrer Kreativität nicht einschraenken.    
+#	g) Darueber hinaus lassen Sie sich in Ihrer Kreativitaet nicht einschraenken.    
 #
 # 3.Tipp: Sie sollten sich ein zweites, kurzes Skript schreiben, das die Firewall komplett oeffnet und alle Regeln loescht, um
 #	jederzeit testen zu koennen, ob Ihr Netzwerk noch steht.
@@ -179,7 +179,7 @@ start)
 # === Part 2: Default Policy setzen ====================
 # ======================================================
 
-# ****************** Alles verbieten und alle Regeln löschen
+# ****************** Alles verbieten und alle Regeln loeschen
 echo " - do: Policy and flush"
 
 # Default Policy: Alles verbieten
@@ -193,7 +193,7 @@ $IPTABLES -F		# flush aller chains (Tabelle filter)
 $IPTABLES -t nat -F	# flush aller chains (Tabelle  nat)
 $IPTABLES -X		# delete all userdefined chains (Tabelle  filter)
 
-# ***** ENDE ******* Alles verbieten und alle Regeln löschen
+# ***** ENDE ******* Alles verbieten und alle Regeln loeschen
 echo " - done: Policy and flush"
 
 
@@ -214,7 +214,7 @@ $IPTABLES -A PREROUTING -t nat -i $iEXT -p tcp --dport 80 -j DNAT --to-destinati
 $IPTABLES -A FORWARD -p TCP -d $Webserver --dport 80 -j ACCEPT
 $IPTABLES -A POSTROUTING -t nat -s $Webserver -o $iEXT -j MASQUERADE
 
-# ******ENDE ******* Alles verbieten und alle Regeln löschen
+# ******ENDE ******* Alles verbieten und alle Regeln loeschen
 echo " - done: NAT und Port-Forwarding"
 
 
@@ -325,7 +325,7 @@ echo " - done: DNS erlauben"
 
 # ****************** Konfiguration HTTP HTTPS **********
 echo " - do: HTTP/S erlauben"
-## HTTP/S für LAN und DMZ erlauben
+## HTTP/S fuer LAN und DMZ erlauben
 for port in ${webPorts[@]}
 do
   $IPTABLES -A FORWARD -p TCP -s $DMZ --dport "$port" -j ACCEPT
@@ -340,7 +340,7 @@ echo " - done: HTTP/S erlauben"
 
 # ****************** Konfiguration RDP *****************
 echo " - do: RDP erlauben"
-# RDP Zugang für DMZ-Server
+# RDP Zugang fuer DMZ-Server
 for protocol in ${protocols[@]}
 do
   $IPTABLES -A FORWARD -p "$protocol" -s $Webserver -d $AdminPC --sport $rdpPort -j ACCEPT
@@ -378,7 +378,7 @@ echo " - done: Schreibe Konfiguration in $lopPath"
 *)
 
 # ****************** Anzeige Fehlermeldung und Hilfe
-echo "Falscher oder kein Parameter übergeben!"
+echo "Falscher oder kein Parameter uebergeben!"
 echo "stop - Stoppt die Firewall."
 echo "start - Startet die Firewall."
 

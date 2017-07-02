@@ -17,15 +17,9 @@ Für die Implementation eines Routers als virtuelle Maschine nutzen wir den vori
 \subsection{Netzwerkplan}
 \label{sec:Geschaeftslogik}
 
-\Abbildung{Netzplan} zeigt die grundsätzliche IP-Adressverteilung in den geplanten Netzwerken. 
-Unser Konzept teilt sich grundsätzlich in das Labornetz (hier symbolisch für den Rest der Welt), das interne Netz (mit den Windows-Clients unseres Kunden) und das von der Außenwelt abgeschottete \ac{DMZ}-Netzwerk, welches nur über spezielle Berechtigungen zu erreichen und für spezielle Dienste (Webserver) zu verwenden ist.
-\begin{figure}[htb]
-\centering
-\includegraphicsKeepAspectRatio{PLZNetzplanProjektumgebung.png}{0.9}
-\caption{Netzplan DMZ Arbeitsgruppe 9}
-\label{fig:Netzplan}
-\end{figure}
-
+\Anhang{app:Netzplan} zeigt die grundsätzliche IP-Adressverteilung in den geplanten Netzwerken.
+Der zweite Netzplan zeigt die erweiterte Testumgebung. 
+Unser Konzept teilt sich jeweils grundsätzlich in das Labornetz (hier symbolisch für den Rest der Welt), das interne Netz (mit den Windows-Clients unseres Kunden) und das von der Außenwelt abgeschottete \ac{DMZ}-Netzwerk, welches nur über spezielle Berechtigungen zu erreichen und für spezielle Dienste (Webserver) zu verwenden ist.
 
 \subsection{Maßnahmen zur Qualitätssicherung}
 \label{sec:Qualitaetssicherung}
@@ -33,39 +27,12 @@ Unser Konzept teilt sich grundsätzlich in das Labornetz (hier symbolisch für d
 	%\item Welche Maßnahmen werden ergriffen, um die Qualität des Projektergebnisses (siehe Kapitel~\ref{sec:Qualitaetsanforderungen}: \nameref{sec:Qualitaetsanforderungen}) zu sichern (\zB automatische Tests, Anwendertests)?
 %	\item \Ggfs Definition von Testfällen und deren Durchführung (durch Programme/Benutzer).
 %\end{itemize}
-Bei jeder Veränderungen der Konfiguration werden Tests durchgeführt. Diese sollen gewährleisten, dass das \nameref{sec:Lastenheft} eingehalten wird. Vorgenommene Konfigurationen werden notiert und das Firewall-Script wird zusätzlich auf einen externen Datenträger kopiert. So wird sichergestellt, dass bei einem Defekt die ursprüngliche Konfiguration schnell wieder verfügbar ist.
+Bei jeder Veränderungen der Konfiguration werden Funktionstests durchgeführt. Diese sollen gewährleisten, dass die Anforderungen aus dem \nameref{sec:Lastenheft} eingehalten werden. Vorgenommene Änderungen an der Firewall und der Systemkonfiguration wird in unserer \Anhang{app:Anleitung} notiert und das Firewall-Script wird auf einem externen Datenträger gespeichert. So wird sichergestellt, dass auch bei einem Defekt die ursprüngliche Konfiguration schnell wieder herstellbar ist.
 
-\subsection{Pflichtenheft/Datenverarbeitungskonzept}
+\subsection{Pflichtenheft}
 \label{sec:Pflichtenheft}
 	%\item Auszüge aus dem Pflichtenheft/Datenverarbeitungskonzept, wenn es im Rahmen des Projekts erstellt wurde.
-\begin{enumerate}
-
-	\item Musskriterien
-	
-	\begin{itemize}
-		\item Das DMZ-Netz erhält die Netzmaske 172.16.9.0/24
-		\item Das intere Netz erhält die Netzmaske 10.0.9.0/24
-		\item Die öffentliche Schnittstelle des Outside-Router erhält die IP 192.168.200.109
-		\item Der Outside-Router erhält als Standard-Gateway die IP 192.168.200.1
-		\item Der Outside-Router erhält eine statische Route für das interne und DMZ-Netz
-		\item Der Inside-Router erhält als Standard-Gateway das Interface des Outside-Routers, welches in die DMZ zeigt
-		\item Der Webserver ist über die öffentliche IP des Outside-Routers über HTTP/S von außen erreichbar
-		\item Der Webserver ist über die lokale IP 172.16.9.3 über HTTP/S aus dem internen Netzwerk erreichbar
-		\item Die Router und Windows-Clients bekommen als DNS-Server die IPs 192.168.95.40 und 192.168.95.41
-		\item Die Router und Windows-Clients bekommen als NTP-Server die IP 192.168.200.1
-		\item Die Firewall verhindert unrechtmäßigen Datentransfer zwischen den Netzen und auf den Routern
-		\item Der Admin-PC mit der IP 10.0.9.2 ist berechtigt mittels SSH auf die Router zuzugreifen	
-	\end{itemize}
-	
-	\item Kannkriterien
-	
-	\begin{itemize}
-		\item Die Firewall lässt sich mit den Optionen "start" und "stop" an- bzw.\ ausschalten
-		\item Die Firewall-Scripts der Router befinden sich im Verzeichnis /root/bin
-		\item Die Veränderung der Firewall-Konfiguration befindet sich jeweils im Verzeichnis /var/log/firewall
-		\item Der Admin-PC mit der IP 10.0.9.2 ist berechtigt mittels RDP auf den Webserver zuzugreifen
-	\end{itemize}
-\end{enumerate}
+Die aus den Anforderungen des aus dem Lastenheft \Anhang{app:Lastenheft} zu findenden hervorgegangenen Anforderungen werden im \Anhang{app:Pflichtenheft} genauer erläutert.
 
 %\paragraph{Beispiel}
 %Ein Beispiel für das auf dem Lastenheft (siehe Kapitel~\ref{sec:Lastenheft}: \nameref{sec:Lastenheft}) aufbauende Pflichtenheft ist im \Anhang{app:Pflichtenheft} zu finden.

@@ -5,11 +5,11 @@
 # === Bemerkung ========================================
 # ======================================================
 
-# Sekundäre Firewall
+# Sekundaere Firewall
 # ...verhindert unbefugten Zugriff vom lokalem Netz auf lokales Interface des Routers.
 # Wenn die Firewall gestoppt ist, wird auch NAT gestoppt. Dies sorgt dafuer,
-# dass auch alle internen Anfragen an das DMZ-Netz über den Outside-Router laufen.
-# Wenn die Firewall startet läuft der Verkehr zwischen LAN und DMZ nur ueber den Inside-Router.
+# dass auch alle internen Anfragen an das DMZ-Netz ueber den Outside-Router laufen.
+# Wenn die Firewall startet laeuft der Verkehr zwischen LAN und DMZ nur ueber den Inside-Router.
 # Da NAT die IP des Admin-PCs uebersetzt, greifen die Zugriffsberechtigungen
 # (ICMP, SSH) auf dem Outside-Router nicht. Daher wird wird er vom NAT ausgeschlossen.
 # 
@@ -144,7 +144,7 @@ start)
 # === Default Policy setzen und NAT ====================
 # ======================================================
 
-# ****************** Alles verbieten und alle Regeln löschen
+# ****************** Alles verbieten und alle Regeln loeschen
 echo " - do: Policy and flush"
 
 # Default Policy: Alles verbieten
@@ -158,13 +158,13 @@ $IPTABLES -F		# flush aller chains (Tabelle filter)
 $IPTABLES -t nat -F	# flush aller chains (Tabelle  nat)
 $IPTABLES -X		# delete all userdefined chains (Tabelle  filter)
 
-# ***** ENDE ******* Alles verbieten und alle Regeln löschen
+# ***** ENDE ******* Alles verbieten und alle Regeln loeschen
 echo " - done: Policy and flush"
 
 
 # ****************** NAT aktivieren ********************
 echo " - do: NAT"
-# NAT auf dem Inside-Router implementieren, Admin-PC auschließen
+# NAT auf dem Inside-Router implementieren, Admin-PC auschliessen
 $IPTABLES -A FORWARD -o $iEXT -s $LAN -m conntrack --ctstate NEW -j ACCEPT
 $IPTABLES -t nat -A POSTROUTING -m iprange --src-range 10.0.9.3-10.0.9.254 -o $iEXT -j MASQUERADE
 
@@ -273,7 +273,7 @@ echo " - done: DNS erlauben"
 
 # ****************** Konfiguration HTTP HTTPS **********
 echo " - do: HTTP/S erlauben"
-## HTTP/S für LAN und DMZ erlauben
+## HTTP/S fuer LAN und DMZ erlauben
 for port in ${webPorts[@]}
 do
   $IPTABLES -A FORWARD -p TCP -s $LAN --dport "$port" -j ACCEPT
@@ -286,7 +286,7 @@ echo " - done: HTTP/S erlauben"
 
 # ****************** Konfiguration RDP *****************
 echo " - do: RDP erlauben"
-# RDP Zugang für DMZ-Server
+# RDP Zugang fuer DMZ-Server
 for protocol in ${protocols[@]}
 do
   $IPTABLES -A FORWARD -p "$protocol" -s $AdminPC -d $Webserver --dport $rdpPort -j ACCEPT
@@ -324,7 +324,7 @@ echo " - done: Schreibe Konfiguration in $lopPath"
 *)
 
 # ****************** Anzeige Fehlermeldung und Hilfe ***
-echo "Falscher oder kein Parameter übergeben!"
+echo "Falscher oder kein Parameter uebergeben!"
 echo "stop - Stoppt die Firewall."
 echo "start - Startet die Firewall."
 
