@@ -1,9 +1,34 @@
-\subsection{Testfall und sein Aufruf auf der Konsole}
-\label{app:Test}
-\lstinputlisting[language=php]{Listings/tests.php}
-\clearpage
-\begin{figure}[htb]
-\centering
-\includegraphicsKeepAspectRatio{testcase.jpg}{1}
-\caption{Aufruf des Testfalls auf der Konsole}
-\end{figure}
+%\section{Testfall und sein Aufruf auf der Konsole}
+%\label{app:Test}
+%\lstinputlisting[language=php]{Listings/tests.php}
+%\clearpage
+%\begin{figure}[htb]
+%\centering
+%\includegraphicsKeepAspectRatio{testcase.jpg}{1}
+%caption{Aufruf des Testfalls auf der Konsole}
+%\end{figure}
+\subsection{Aufbau der Testumgebung}
+\paragraph{Systeminformation}
+\begin{table}[htb]
+\begin{tabularx}{\textwidth}{cXX}
+Prozessor & Intelel® Core™ i7-6700K Prozessor 8 MB Cache, 4.20 GHz \\ 
+\rowcolor{odd} RAM & 2x16GB DDR4-2400 DIMM CL15 Dual \\
+Speicher & 1x250GB SSD + 1x500GB SSD \\ 
+\rowcolor{odd} Betriebssystem & Windows Server 2016 Datacenter \\
+\end{tabularx}
+\end{table}
+
+\subsubsection{Implementierung der Virtuellen Maschinen}
+Im Server-Manager fügen wir über "Verwalten" -> "Rollen und Features hinzufügen" den Hyper-V-Manager hinzu indem wir dem Assistenten folgen. Dieser gestattet es virtuelle Maschinen und Netzwerke zu installieren.
+\subparagraph*{} Als nächstes wird eine neue virtuelle Linux (Debian 7.1)  Maschine (Generation 1) aus einem image erstellt. Dies geschieht mit Hilfe eines Assistenten. Sie bekommt einen virtuellen Prozessor und 1GB Arbeitsspeicher. Desweiteren wird bei der Installation eine 5GB große Festplatte für die Maschine erstellt und ihr zugewiesen. Als virtuellen Switch weisen wir ihr vorläufig den Netzwerkadapter des Hosts zu. Somit besitzt unsere Linux-VM Internet. Um sie zu installieren, startet man nun die Maschine und verbindet sich zu ihr. Danach folgt man wie gewohnt den Installationsschritten wie bei einer physischen Maschine. Danach installieren wir ebenfalls noch den ntp-service. Ist die Grundkonfiguration fertig, wird die Maschine ausgeschaltet.
+\subparagraph*{} Die Installation der Windows 7 VM erfolgt analog zu die der Linux VM. Wir vergeben jedoch 4GB Ram und erstellen eine mindestens 30GB große virtuelle Festplatte. Nach der Installation wird die Firewall (wie in Kapitel 4 implementierungsphase). Zusätzlich werden noch nützliche Software wie putty oder winscp heruntergeladen.
+\subparagraph*{} Nach der Grundkonfiguration der beiden VMs können diese nun dupliziert werden. Dazu muss man die virtuelle Maschine erst exportieren, um sie danach wieder zu importieren. Beim Import sollte man darauf achten, dass man "eine neue eindeutige ID" erstellt. Nacchdem starten der importierten Maschine wird als ersten der Hostname geändert, um sie von der Originalen zu unterscheiden und um DNS-Konflikte zu vermeiden.
+\subsubsection{Implementierung des virtuellen Netzwerkes}
+Virtuelle Netzwerke werden über das Hinzufügen virtueller Switche an den Netzwerkadaptern der virtuellen Maschine erstellt. Auf diesen lassen sich auch vlans einrichten.
+\subparagraph*{} Die Installation eines solchen Switch wird ebenfalls von Hyper-V-Manager mit einem Assistenten bereit gestellt. Für Testzwecke werden 2 "private" Switche erstellt, da diese die direkte Kommunkation mit dem Host unterbieten und somit nicht die Router umgangen werden. Diese erhalten den Namen DMZ- bzw.\ LAN-Switch. Ein "öffentlicher" Switch ist bereits vorhanden. Mit diesem ist der physische Netzwerkadapter des Hosts verbunden. Diese werden dann den VMs entsprechend des \textbf{Netzplans} (Siehe) zugeordnet. Für die Linux-VMs, die als Router fungieren werden, muss evtl.\ noch ein zweiter Netzwerkadapter hinzugefügt werden.
+\subparagraph*{} Nun können die Router und Clients (\text{Siehe Bild und Implementierung}) konfiguriert werden.
+\subsubsection{Implementierung des DNS-Servers}
+Der DNS-Server wird ebenfalls über den Server-Manager (unter "Rollen und Features hinzufügen") installiert. Diesen kann man nun über den DNS-Manager verwalten. Es genügt eine "Forward-Lookup" Zone zu erstellen. Als Zonennamen wählen wir "fritz.box" da bereits das Standard-Gateway darauf verweist. Dies ist die Domäne bzw. das DNS-Suffix. Dieses Suffix wird auf den Windows-VMs in den IPv4-Einstellungen des Netzwerkadapters nachgetragen. Auf den Linux-VMs tragen wir dies zusätzlich in die \verb+/etc/resolv.conf+ vor unserem DNS-Server ein. \textbf{siehe resolv.conf oder selber schreiben]
+Über den DNS-Manager werden im Anschluss noch in der Zone "fritz.box" unsere VMs (A-Record) mit Namen und IP-Adressen eingetragen. \textbf Siehe DNSManager.png}.
+\subsubsection{Firewall testen}
+Nachdem das Firewall-Script auf die Router kopiert und die DNS-Server angepasst wurden, kann mit den Tests begonnen und die Firewall ggf.\ angepasst werden. Dazu speichern wird der Verlauf der erstellten Regeln in \verb+/var/log/firewall/firewallConfig+ gespeichert.
