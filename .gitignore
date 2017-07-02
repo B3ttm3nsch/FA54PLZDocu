@@ -18,7 +18,7 @@ Thumbs.db
 # editor generated files #
 ##########################
 
-*.pdf
+#*.pdf
 *.aux
 *.bbl
 *.blg

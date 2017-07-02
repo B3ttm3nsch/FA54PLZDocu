@@ -8,7 +8,7 @@
 %caption{Aufruf des Testfalls auf der Konsole}
 %\end{figure}
 \subsection{Aufbau der Testumgebung}
-\paragraph{Systeminformation}
+\paragraph{Systeminformation}\\
 \begin{table}[htb]
 \begin{tabularx}{\textwidth}{cXX}
 Prozessor & Intelel® Core™ i7-6700K Prozessor 8 MB Cache, 4.20 GHz \\ 
@@ -32,3 +32,9 @@ Der DNS-Server wird ebenfalls über den Server-Manager (unter "Rollen und Featur
 Über den DNS-Manager werden im Anschluss noch in der Zone "fritz.box" unsere VMs (A-Record) mit Namen und IP-Adressen eingetragen. \textbf Siehe DNSManager.png}.
 \subsubsection{Firewall testen}
 Nachdem das Firewall-Script auf die Router kopiert und die DNS-Server angepasst wurden, kann mit den Tests begonnen und die Firewall ggf.\ angepasst werden. Dazu speichern wird der Verlauf der erstellten Regeln in \verb+/var/log/firewall/firewallConfig+ gespeichert.
+
+\subsubsection{firewall.sh (Outside-Router)}
+\lstinputlisting[language=sh]{Listings/outside/firewall.sh}
+
+\subsubsection{firewall.sh (Inside-Router)}
+\lstinputlisting[language=sh]{Listings/inside/firewall.sh}

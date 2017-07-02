@@ -3,8 +3,23 @@
 \contentsline {table}{\numberline {2}{\ignorespaces Kostenaufstellung}}{7}{table.54}
 \contentsline {table}{\numberline {3}{\ignorespaces Zwischenstand nach der Analysephase}}{8}{table.64}
 \contentsline {table}{\numberline {4}{\ignorespaces Zwischenstand nach der Entwurfsphase}}{11}{table.76}
+<<<<<<< HEAD
+\contentsline {table}{\numberline {5}{\ignorespaces Zwischenstand nach der Implementierungsphase}}{13}{table.94}
+\contentsline {table}{\numberline {6}{\ignorespaces Zwischenstand nach der Abnahmephase}}{14}{table.98}
+\contentsline {table}{\numberline {7}{\ignorespaces Zwischenstand nach der Einf\IeC {\"u}hrungsphase}}{14}{table.101}
+\contentsline {table}{\numberline {8}{\ignorespaces Zwischenstand nach der Dokumentation}}{15}{table.106}
+\contentsline {table}{\numberline {9}{\ignorespaces Soll-/Ist-Vergleich}}{16}{table.110}
+=======
 \contentsline {table}{\numberline {5}{\ignorespaces Zwischenstand nach der Implementierungsphase}}{14}{table.103}
+<<<<<<< HEAD
 \contentsline {table}{\numberline {6}{\ignorespaces Zwischenstand nach der Abnahmephase}}{15}{table.107}
 \contentsline {table}{\numberline {7}{\ignorespaces Zwischenstand nach der Einf\IeC {\"u}hrungsphase}}{15}{table.110}
 \contentsline {table}{\numberline {8}{\ignorespaces Zwischenstand nach der Dokumentation}}{16}{table.115}
 \contentsline {table}{\numberline {9}{\ignorespaces Soll-/Ist-Vergleich}}{17}{table.119}
+=======
+\contentsline {table}{\numberline {6}{\ignorespaces Zwischenstand nach der Abnahmephase}}{15}{table.106}
+\contentsline {table}{\numberline {7}{\ignorespaces Zwischenstand nach der Einf\IeC {\"u}hrungsphase}}{15}{table.109}
+\contentsline {table}{\numberline {8}{\ignorespaces Zwischenstand nach der Dokumentation}}{16}{table.114}
+\contentsline {table}{\numberline {9}{\ignorespaces Soll-/Ist-Vergleich}}{16}{table.118}
+>>>>>>> master
+>>>>>>> master
