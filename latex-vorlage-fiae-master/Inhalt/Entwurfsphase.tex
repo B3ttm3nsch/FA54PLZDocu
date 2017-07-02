@@ -1,9 +1,8 @@
 % !TEX root = ../Projektdokumentation.tex
 \section{Entwurfsphase} 
 \label{sec:Entwurfsphase}
-
 % Erklärung
-Da unsere Hard- und Software von unserem Auftraggeber gestellt und vorgegeben wird, erübrigt seine ausführliche Begründung, weshalb wir diese Materialien verwendet haben. Zudem wird so sichergestellt, dass während unserer Projektzeit alle benötigten Mittel zur Verfügung stehen.
+Da Hard- und Software von unserem Auftraggeber gestellt und vorgegeben wird, erübrigt seine ausführliche Begründung, weshalb wir diese Materialien verwendet haben. So wird sichergestellt, dass während unserer Projektzeit allen die gleichen benötigten Mittel zur Verfügung stehen.
 
 \subsection{Zielplattform}
 \label{sec:Zielplattform}
@@ -17,25 +16,22 @@ Für die Implementation eines Routers als virtuelle Maschine nutzen wir den vori
 \subsection{Netzwerkplan}
 \label{sec:Geschaeftslogik}
 
-\Anhang{app:Netzplan} zeigt die grundsätzliche IP-Adressverteilung in den geplanten Netzwerken.
-Der zweite Netzplan zeigt die erweiterte Testumgebung. 
-Unser Konzept teilt sich jeweils grundsätzlich in das Labornetz (hier symbolisch für den Rest der Welt), das interne Netz (mit den Windows-Clients unseres Kunden) und das von der Außenwelt abgeschottete \ac{DMZ}-Netzwerk, welches nur über spezielle Berechtigungen zu erreichen und für spezielle Dienste (Webserver) zu verwenden ist.
+Die im \Anhang{app:Netzplan} zu findenden Netzpläne zeigen die grundsätzliche IP-Adressverteilung in den geplanten Netzen unseres Projektes.
+Der zweite Netzplan zeigt die erweiterte Testumgebung die wir gegen Ende des Projekts zuhause einrichten mussten, um die Tests an der Firewall zu beenden. 
+Unser Netz teilt sich gleichfalls jeweils in das Labornetz (hier auch symbolisch für die Cloud, das Internet, \etc. stehend), das von der Außenwelt abgeschottete interne Netz (mit den Windows-Clients und dem Admin-Rechner unseres Kunden) und das als Pufferzone dazwischen liegende \ac{DMZ}-Netzwerk, welches zur Absicherung des internen Netzes nur über spezielle Berechtigungen zu erreichen und für spezielle Dienste (Webserver) zu verwenden ist.
 
 \subsection{Maßnahmen zur Qualitätssicherung}
 \label{sec:Qualitaetssicherung}
-%begin{itemize}
-	%\item Welche Maßnahmen werden ergriffen, um die Qualität des Projektergebnisses (siehe Kapitel~\ref{sec:Qualitaetsanforderungen}: \nameref{sec:Qualitaetsanforderungen}) zu sichern (\zB automatische Tests, Anwendertests)?
-%	\item \Ggfs Definition von Testfällen und deren Durchführung (durch Programme/Benutzer).
-%\end{itemize}
-Bei jeder Veränderungen der Konfiguration werden Funktionstests durchgeführt. Diese sollen gewährleisten, dass die Anforderungen aus dem \nameref{sec:Lastenheft} eingehalten werden. Vorgenommene Änderungen an der Firewall und der Systemkonfiguration wird in unserer \Anhang{app:Anleitung} notiert und das Firewall-Script wird auf einem externen Datenträger gespeichert. So wird sichergestellt, dass auch bei einem Defekt die ursprüngliche Konfiguration schnell wieder herstellbar ist.
+% Welche Maßnahmen werden ergriffen, um die Qualität des Projektergebnisses (siehe Kapitel~\ref{sec:Qualitaetsanforderungen}: \nameref{sec:Qualitaetsanforderungen}) zu sichern (\zB automatische Tests, Anwendertests)?
+% \Ggfs Definition von Testfällen und deren Durchführung (durch Programme/Benutzer).
+Bei jeder Veränderungen der Konfiguration werden Funktionstests durchgeführt. Diese sollen gewährleisten, dass die Anforderungen aus dem \ref{sec:Lastenheft} eingehalten werden. Vorgenommene Änderungen an der Firewall und der Systemkonfiguration werden in unserer vorläufigen Dokumentation, zu finden im \Anhang{app:Anleitung}, notiert und das Firewall-Script wird separat auf einem externen Datenträger gespeichert. So wird sichergestellt, dass auch bei einem Defekt eines der virtuellen Linux-Router die ursprüngliche Konfiguration schnell wieder von Null auf herstellbar ist und möglichst keine Downtime bei der Arbeit entsteht.
 
 \subsection{Pflichtenheft}
 \label{sec:Pflichtenheft}
-	%\item Auszüge aus dem Pflichtenheft/Datenverarbeitungskonzept, wenn es im Rahmen des Projekts erstellt wurde.
-Die aus den Anforderungen des aus dem Lastenheft \Anhang{app:Lastenheft} zu findenden hervorgegangenen Anforderungen werden im \Anhang{app:Pflichtenheft} genauer erläutert.
+% Auszüge aus dem Pflichtenheft/Datenverarbeitungskonzept, wenn es im Rahmen des Projekts erstellt wurde.
+Die aus den zuvor im \ref{sec:Lastenheft} gesammelten Punkte hervorgehenden Anforderungen werden im Pflichtenheft genauer in bevorstehende Aufgaben übersetzt. Dieses ist im \Anhang{app:Pflichtenheft} zu finden.
 
 %\paragraph{Beispiel}
 %Ein Beispiel für das auf dem Lastenheft (siehe Kapitel~\ref{sec:Lastenheft}: \nameref{sec:Lastenheft}) aufbauende Pflichtenheft ist im \Anhang{app:Pflichtenheft} zu finden.
-
 
 \Zwischenstand{Entwurfsphase}{Entwurf}

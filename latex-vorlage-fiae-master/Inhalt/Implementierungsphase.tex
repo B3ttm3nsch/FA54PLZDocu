@@ -2,26 +2,22 @@
 \section{Implementierungsphase} 
 \label{sec:Implementierungsphase}
 
-\dots immer testen usw.
-
-%\noindent\hspace*{42mm}%
+Dank der von der Schule zur Verfügung gestellten Hard- und Software im Labor 3.1.01 erfolgt die im folgenden genauer dargestellte Installation der virtuellen Router relativ problemlos. Dies muss jedoch immer wieder durch Testen des bisherigen Fortschritts verifiziert werden. 
 
 \subsection{Implementierung der Virtuellen Maschinen}
 \label{subsec:ImplementierungVMs}
-Eine Debian Distribution als virtuelle Maschine ist bereits auf beiden Rechnern vorhanden. Diese wird kopiert und dann mit dem VMWare Player gestartet. Wir überbrücken die physischen Netzwerkadapter der Windows Hosts auf die virtuellen Adapter der Linux Distribution. So haben die designierten Router über die physischen Interfaces Zugriff auf das Netzwerk. 
-
+Eine Debian Distribution als virtuelle Maschine ist bereits auf beiden Rechnern vorhanden. Diese wird kopiert und dann mit dem VMWare Player gestartet. Wir überbrücken die physischen Netzwerkadapter der Windows-Hosts auf die virtuellen Adapter der Linux Distribution. So haben die designierten Router über die physischen Interfaces Zugriff auf das Netzwerk. 
 
 \subsection{Konfiguration der Router}
 \label{subsec:KonfigurationRouter}
 
 Über dem VMWare Player auf den Windows Hosts verbinden wir uns auf die Router und können diese dann über das Terminal konfigurieren. Die Passwörter, die wir vom Kunden erhalten haben, lassen wir unverändert. Als erstes werden die Hostnamen angepasst. Dazu ersetzt man den alten Namen in den Dateien \texttt{/etc/hostname} und \texttt{/etc/hosts}. Danach sollte die Maschine neu gestartet werden.
-\subparagraph*{} Diese und alle weiteren von uns benötigten Dateien lassen sich über einen vorinstallierten Editor öffnen und bearbeiten, z.\ B.\ mit vi:\\\\
-\noindent\hspace*{42mm} \texttt{vi /etc/hostname}.
+\subparagraph*{} Diese und alle weiteren von uns benötigten Dateien lassen sich über einen vorinstallierten Editor öffnen und bearbeiten, z.\ B.\ mit vi:\\
+\noindent\hspace*{42mm} \texttt{vi /etc/hostname}
 
 \subsubsection{Konfiguration der Interfaces}
 \label{subsubsec:KonfigurationInsideRouterInt}
-Für die Konfiguration der Interfaces halten wir uns an den erstellten Netzplan (Siehe ??).
-Um die Interfaces zu konfigurieren, wird die Datei \texttt{/etc/network/interfaces} geöffnet.
+Für die Konfiguration der Interfaces halten wir uns an den erstellten \ref{sec:Netzplan}. Um die Interfaces zu konfigurieren editieren wir jeweils deren Konfiguration in der Datei \texttt{/etc/network/interfaces}.
 
 \paragraph*{Inside-Router} Für den Inside-Router tragen wir neben den IP-Adressen seiner Schnittstellen als Standard-Gateway das Interface des Outside-Routers ein, welsches sich in der DMZ befinden soll. (Siehe Anhang InideRouterInt.png)
 
