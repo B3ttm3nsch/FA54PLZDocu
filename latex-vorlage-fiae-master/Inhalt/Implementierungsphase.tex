@@ -12,32 +12,32 @@ Eine Debian Distribution als virtuelle Maschine ist bereits auf beiden Rechnern 
 \label{subsec:KonfigurationRouter}
 
 Über dem VMWare Player auf den Windows Hosts verbinden wir uns auf die Router und können diese dann über das Terminal konfigurieren. Die Passwörter, die wir vom Kunden erhalten haben, lassen wir unverändert. Als erstes werden die Hostnamen angepasst. Dazu ersetzt man den alten Namen in den Dateien \texttt{/etc/hostname} und \texttt{/etc/hosts}. Danach sollte die Maschine neu gestartet werden.
-\subparagraph*{} Diese und alle weiteren von uns benötigten Dateien lassen sich über einen vorinstallierten Editor öffnen und bearbeiten, z.\ B.\ mit vi:\\
+Diese und alle weiteren von uns benötigten Dateien lassen sich über einen vorinstallierten Editor öffnen und bearbeiten, z.\ B.\ mit vi:\\
 \noindent\hspace*{42mm} \texttt{vi /etc/hostname}
 
 \subsubsection{Konfiguration der Interfaces}
 \label{subsubsec:KonfigurationInsideRouterInt}
-Für die Konfiguration der Interfaces halten wir uns an den erstellten \ref{sec:Netzplan}. Um die Interfaces zu konfigurieren editieren wir jeweils deren Konfiguration in der Datei \texttt{/etc/network/interfaces}.
+Für die Konfiguration der Interfaces halten wir uns an den erstellten \nameref{app:Netzplan}. Um die Interfaces zu konfigurieren editieren wir jeweils deren Konfiguration in der Datei \texttt{/etc/network/interfaces}.
 
-\paragraph*{Inside-Router} Für den Inside-Router tragen wir neben den IP-Adressen seiner Schnittstellen als Standard-Gateway das Interface des Outside-Routers ein, welsches sich in der DMZ befinden soll. (Siehe Anhang InideRouterInt.png)
+\paragraph*{Inside-Router} Für den Inside-Router tragen wir neben den \ac{IP}-Adressen seiner Schnittstellen als Standard-Gateway das Interface des Outside-Routers ein, welsches sich in der \ac{DMZ} befinden soll. (Siehe Anhang InideRouterInt.png)
 
-\paragraph*{Outside-Router} Der Outside-Router erhält zusätlich zu seinen IP-Adressen als Gateway die IP-Adresse 192.168.200.1 (Standard-Gateway Labornetz). (Siehe Anhang OutsideRouterInt.png)
+\paragraph*{Outside-Router} Der Outside-Router erhält zusätlich zu seinen \ac{IP}-Adressen als Gateway die \ac{IP}-Adresse 192.168.200.1 (Standard-Gateway Labornetz). (Siehe Anhang OutsideRouterInt.png)
 
 \subsubsection{Konfiguration der statischen Routern}
 \label{subsubsec:KonfigurationStatischeRouten}
-Wir benötigen zwei statische Routen auf dem Outside-Router, eine für die DMZ und eine für das LAN. (Siehe Anhang OuutsideRouterInt.png)
+Wir benötigen zwei statische Routen auf dem Outside-Router, eine für die \ac{DMZ} und eine für das \ac{LAN}. (Siehe Anhang OuutsideRouterInt.png)
 
-\subsubsection{Konfiguration von NAT und Port-Forwarding}
+\subsubsection{Konfiguration von \ac{NAT} und Port-Forwarding}
 \label{subsubsec:KonfigurationNAT}
-Weiterhin konfigurieren wir in der "interfaces" Datei vom Outside-Router NAT für die DMZ und das LAN sowie Port-Forwarding zu unserem Webserver ein. (Siehe Anhang OuutsideRouterInt.png)
-Um jedoch NAT und Port-Forwarding auf beiden Routern nutzen zu können, müssen wir dies erst aktivieren. Dies geschieht mit dem Befehl
+Weiterhin konfigurieren wir in der \textit{interfaces} Datei vom Outside-Router \ac{NAT} für die \ac{DMZ} und das \ac{LAN} sowie Port-Forwarding zu unserem Webserver ein. (Siehe Anhang OuutsideRouterInt.png)
+Um jedoch \ac{NAT} und Port-Forwarding auf beiden Routern nutzen zu können, müssen wir dies erst aktivieren. Dies geschieht mit dem Befehl
 \verb+echo 1 > /proc/sys/net/ipv4/ip_forward}+.
 
-\subparagraph*{}  Dies ist jedoch nur eine temporäre Losung und geht nach einem Neustart verloren. Damit der Prozess mit dem Systemstart geladen wird, tragen wir (, nachdem unsere Tests erfolgreich waren, ) setzen wir den Wert in der Datei \texttt{/etc/sysctl.conf} von  \verb+#net.ipv4.ip_forward+ auf \verb+1+ und kommentieren diese Zeile aus.
+Dies ist jedoch nur eine temporäre Lösung und geht nach einem Neustart verloren. Damit der Prozess mit dem Systemstart geladen wird, setzen wir den Wert von  \verb+#net.ipv4.ip_forward+ in der Datei \texttt{/etc/sysctl.conf} auf \verb+1+ und entfernen den Kommentar vom Anfang dieser Zeile.
 
-\subsubsection{Konfiguration des DNS-Server}
+\subsubsection{Konfiguration des \ac{DNS}-Servers}
 \label{subsubsec:KonfigurationLinuxDNS}
-In der Datei \verb+/etc/resolv.conf+ tragen wir für beide die IP-Adresse der von unserem Auftraggeber bereitgestellten DNS-Server ein.
+In der Datei \verb+/etc/resolv.conf+ tragen wir für beide die \ac{IP}-Adresse der von unserem Auftraggeber bereitgestellten \ac{DNS}-Server ein.
 \begin{verbatim}
 nameserver 192.168.200.40
 nameserver 192.168.200.41
@@ -45,46 +45,45 @@ nameserver 192.168.200.41
 
 \subsubsection{Konfiguration des Zeitserver}
 \label{subsubsec:KonfigurationLinuxNTP}
-Um einen Zeitserver angeben und nutzen zu können, installieren wir mit \verb+apt-get install ntp+ den ntp-Dienst. Danach fügen wir die IP-Adresse des bereitgestellten NTP-Servers (Standard-Gateway) in die Datei \verb+/etc/ntp..conf+ ein: \verb+server 192.168.200.1 iburst+. (Siehe NTP.conf)
-
+Um einen Zeitserver angeben und nutzen zu können, installieren wir mit \verb+apt-get install ntp+ den \ac{NTP}-Dienst. Danach fügen wir die \ac{IP}-Adresse des bereitgestellten \ac{NTP}-Servers (Standard-Gateway) in die Datei \verb+/etc/ntp.conf+ ein: \verb+server 192.168.200.1 iburst+. (Siehe ntp.conf)
 
 
 \subsection{Implementierung der physischen Hosts}
 \label{subsec:ImplementierungHosts}
-Bevor die Schnittstellen auf die Router angepasst werden, werden noch evtl.\ benötigte Dateien und Programme (webserver, notepad++, putty, winscp) heruntergeladen. Im Gegensatz zu Router-Konfiguration wird hier fast ausschließlich mit der GUI gearbeitet.
+Bevor die Schnittstellen auf die Router angepasst werden, werden noch \evtl benötigte Dateien und Programme (webserver, notepad++, putty, winscp) heruntergeladen. Im Gegensatz zu Router-Konfiguration wird hier fast ausschließlich mit der \ac{GUI} gearbeitet.
 
 \subsubsection{Konfiguration der Interfaces}
 \label{subsubsec:KonfigurationHostInt}
-Für die IP-Adressierung halten wir uns ebenfalls an den Netzplan(Siehe Netzplan Produktionsumgebung).
+Für die \ac{IP}-Adressierung halten wir uns ebenfalls an den \nameref{app:Netzplan}.
 
-\paragraph*{Admin-PC} Der für die spätere Verwaltung der Router und des Webserver zuständige Host, befindet sich im LAN und erhält als Gateway den Inside-Router (Siehe Anhang AdminPCInt.png)
+\paragraph*{Admin-\ac{PC}} Der für die spätere Verwaltung der Router und des Webserver zuständige Host, befindet sich im \ac{LAN} und erhält als Gateway den Inside-Router (Siehe Anhang AdminPCInt.png)
 
-\paragraph*{Webserver} Der Webserver befindet sich in der DMZ und erhält als Gateway den Outside-Router. (Siehe Anhang WebserverInt.png)
+\paragraph*{Webserver} Der Webserver befindet sich in der \ac{DMZ} und erhält als Gateway den Outside-Router. (Siehe Anhang WebserverInt.png)
 
 \subsubsection{Konfiguration des Webservers}
 \label{subsubsec:KonfigurationWebserver}
-Auf dem Host in der DMZ wird ein einfacher Webserver, welcher über Port 80 kommuniziert, ausgeführt. Durch das Anpassen der "index.html" wird die Website entsprechend des Kundenwunsches angepasst.
+Auf dem Host in der \ac{DMZ} wird ein einfacher Webserver, welcher über Port 80 kommuniziert, ausgeführt. Durch das Anpassen der Datei \textit{index.html} wird die Website entsprechend des Kundenwunsches angepasst.
 
 \subsubsection{Konfiguration der Windows-Firewall}
 \label{subsubsec:KonfigurationWinFirewall}
-Um auf den Hosts die Firewall testen und einen DNS-Server nutzen zu können muss die Windows-Firewall noch dementsprechend angepasst werden.
-Dazu ist es nötig die Anpassungen für sowohl die "eingehenden" als auch "ausgehenden" Regeln vorzunehmen.
-\subparagraph*{} Damit wir einen "ping"-Befehl absetzen können, ist es nötig die Regel für die "Datei- und Druckerabfrage" für ICMPv4 zu aktivieren.
-\subparagraph*{} Für die Kommunikation zum DNS-Server erstellen wir zwei Regeln, je eine für das TCP- bzw. \ UPD-Protokoll. Darin erlauben wir die Kommunikation über die Ports 53 und 853.
+Um auf den Hosts die Firewall testen und einen \ac{DNS}-Server nutzen zu können muss die Windows-Firewall noch dementsprechend angepasst werden.
+Dazu ist es nötig die Anpassungen für sowohl die ein- als auch ausgehenden Regeln vorzunehmen. 
+Damit wir einen \textit{ping}-Befehl absetzen können, ist es nötig die Regel für die \textit{Datei- und Druckerabfrage} für \ac{ICMP}v4 zu aktivieren.
+Für die Kommunikation zum \ac{DNS}-Server erstellen wir zwei Regeln, je eine für das \ac{TCP}- \bzw das \ac{UPD}-Protokoll. Darin erlauben wir die Kommunikation über die Ports 53 und 853.
 
 \subsubsection{Konfiguration des Zeitservers}
 \label{subsubsec:KonfigurationWinNTP}
-Die IP des Zeit-Server tragen wir in den "Datum und Uhrzeiteinstellungen" unter der Registerkarte "Internetzeit" ein.
+Die \ac{IP}-Adresse des Zeit-Server tragen wir in den "Datum und Uhrzeiteinstellungen" unter der Registerkarte "Internetzeit" ein.
 
 \subsection{Konfiguration der Firewall}
 \label{subsec:KonfigurationFirewall}
-Dass durch den Auftraggeber vorgegebene Script wird entsprechend der in sich befindlichen Vorlage auf beiden Routern angepasst und die DMZ somit von beiden Seiten abgeschottet. Entsprechend des übergebenen Parameters (\verb+start+, \verb+stop+) wird das BASH-Script gestartet bzw.\ geschlossen.
+Dass durch den Auftraggeber vorgegebene Script wird entsprechend der in sich befindlichen Vorlage auf beiden Routern angepasst und die \ac{DMZ} somit von beiden Seiten abgeschottet. Entsprechend des übergebenen Parameters (\verb+start+, \verb+stop+) wird das \ac{BASH}-Script gestartet bzw.\ geschlossen.
 % ausführbar durch chmod +x
 % path erweitern in bash.rc, dadurch skript von überall ausführbar
 % firewall bei boot des routers starten durch schreiben in rc.local 
-\subparagraph*{} Wird die Outside-Firewall gestoppt, existiert eine uneingeschränkte Verbindung zwischen dem Labornetz und der DMZ. Das interne Netz ist weiterhin durch den Inside-Router geschützt. Ist die Inside-Firewall gestoppt, sind die Netze weiterhin durch den Outside-Router geschützt. Der Inside-Router ist nun jedoch aus dem internen Netz frei erreichbar.
-\subparagraph*{} Des weiteren schreibt die Firewall ihre Einstellungen zum jeweiligen Zustand, wenn Sie gestartet \bzw gestoppt wird in eine Log-File. Diese befindet sich im Ordner \verb+/var/log/firewall/firewallConfig+.
-\subparagraph*{}  Genauere Angaben zu den finalen Firewall-Scripten finden sich im \Anhang{app:Firewall-Outside} sowie im \Anhang{app:Firewall-Inside}.
+Wird die Outside-Firewall gestoppt, existiert eine uneingeschränkte Verbindung zwischen dem Labornetz und der \ac{DMZ}. Das interne Netz ist weiterhin durch den Inside-Router geschützt. Ist die Inside-Firewall gestoppt, sind die Netze weiterhin durch den Outside-Router geschützt. Der Inside-Router ist nun jedoch aus dem internen Netz frei erreichbar.
+Des weiteren schreibt die Firewall ihre Einstellungen zum jeweiligen Zustand, wenn Sie gestartet \bzw gestoppt wird in eine Log-File. Diese befindet sich im Ordner \verb+/var/log/firewall/firewallConfig+.
+Genauere Angaben zu den finalen Firewall-Scripten finden sich im \Anhang{app:Firewall-Outside} sowie im \Anhang{app:Firewall-Inside}.
 
 %\begin{itemize}
 %	\item Beschreibung der Implementierung der Benutzeroberfläche, falls dies separat zur Implementierung der Geschäftslogik erfolgt (\zB bei \acs{HTML}-Oberflächen und Stylesheets).

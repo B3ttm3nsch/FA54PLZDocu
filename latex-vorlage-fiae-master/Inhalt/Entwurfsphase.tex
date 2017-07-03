@@ -8,15 +8,15 @@ Da Hard- und Software von unserem Auftraggeber gestellt und vorgegeben wird, er�
 \label{sec:Zielplattform}
 
 \paragraph*{Hardware: } 
-Die uns zur Verfügung stehenden Desktop PCs bleiben unverändert. Die Leistungsdaten derer  genügen für den Aufbau einer einfachen DMZ.
+Die uns zur Verfügung stehenden Desktop \ac{PC}s bleiben unverändert. Die Leistungsdaten derer  genügen für den Aufbau einer einfachen \ac{DMZ}.
 
 \paragraph*{Software: } 
-Für die Implementation eines Routers als virtuelle Maschine nutzen wir den vorinstallierten VMWare Player. Dieser ist kostenlos und berechtigt uns zum Virtualisieren einer Linux Distribution. Des Weiteren werden wir auch das beigefügte Debian benutzen. Auf den VMs wird mit BASH und Linux-Befehlen gearbeitet, da wir nur kleinere Konfigurationen und Scripts schreiben. Um die Konfiguration zu testen, die Router per Remote zu konfigurieren und eventuell Dateien auszutauschen, wird noch SSH- und FTP-Client-Software benötigt. Dafür werden wir Putty und winscp verwenden. Diese Tools sind kompakt und beeinträchtigen nicht die Leistung der Hosts.
+Für die Implementation eines Routers als virtuelle Maschine nutzen wir den vorinstallierten VMWare Player. Dieser ist kostenlos und berechtigt uns zum Virtualisieren einer Linux Distribution. Des Weiteren werden wir auch das beigefügte Debian benutzen. Auf den \ac{VM}s wird mit \ac{BASH} und Linux-Befehlen gearbeitet, da wir nur kleinere Konfigurationen und Scripts schreiben. Um die Konfiguration zu testen, die Router per Remote zu konfigurieren und eventuell Dateien auszutauschen, wird noch \ac{SSH}- und \ac{FTP}-Client-Software benötigt. Dafür werden wir Putty und winscp verwenden. Diese Tools sind kompakt und beeinträchtigen nicht die Leistung der Hosts.
 
 \subsection{Netzwerkplan}
 \label{sec:Geschaeftslogik}
 
-Die im \Anhang{app:Netzplan} zu findenden Netzpläne zeigen die grundsätzliche IP-Adressverteilung in den geplanten Netzen unseres Projektes.
+Die im \Anhang{app:Netzplan} zu findenden Netzpläne zeigen die grundsätzliche \ac{IP}-Adressverteilung in den geplanten Netzen unseres Projektes.
 Der zweite Netzplan zeigt die erweiterte Testumgebung die wir gegen Ende des Projekts zuhause einrichten mussten, um die Tests an der Firewall zu beenden. 
 Unser Netz teilt sich gleichfalls jeweils in das Labornetz (hier auch symbolisch für die Cloud, das Internet, \etc. stehend), das von der Außenwelt abgeschottete interne Netz (mit den Windows-Clients und dem Admin-Rechner unseres Kunden) und das als Pufferzone dazwischen liegende \ac{DMZ}-Netzwerk, welches zur Absicherung des internen Netzes nur über spezielle Berechtigungen zu erreichen und für spezielle Dienste (Webserver) zu verwenden ist.
 
@@ -24,12 +24,12 @@ Unser Netz teilt sich gleichfalls jeweils in das Labornetz (hier auch symbolisch
 \label{sec:Qualitaetssicherung}
 % Welche Maßnahmen werden ergriffen, um die Qualität des Projektergebnisses (siehe Kapitel~\ref{sec:Qualitaetsanforderungen}: \nameref{sec:Qualitaetsanforderungen}) zu sichern (\zB automatische Tests, Anwendertests)?
 % \Ggfs Definition von Testfällen und deren Durchführung (durch Programme/Benutzer).
-Bei jeder Veränderungen der Konfiguration werden Funktionstests durchgeführt. Diese sollen gewährleisten, dass die Anforderungen aus dem \ref{sec:Lastenheft} eingehalten werden. Vorgenommene Änderungen an der Firewall und der Systemkonfiguration werden in unserer vorläufigen Dokumentation, zu finden im \Anhang{app:Anleitung}, notiert und das Firewall-Script wird separat auf einem externen Datenträger gespeichert. So wird sichergestellt, dass auch bei einem Defekt eines der virtuellen Linux-Router die ursprüngliche Konfiguration schnell wieder von Null auf herstellbar ist und möglichst keine Downtime bei der Arbeit entsteht.
+Bei jeder Veränderungen der Konfiguration werden Funktionstests durchgeführt. Diese sollen gewährleisten, dass die Anforderungen aus dem \nameref{sec:Lastenheft} eingehalten werden. Vorgenommene Änderungen an der Firewall und der Systemkonfiguration werden in unserer vorläufigen Dokumentation, zu finden im \Anhang{app:Anleitung}, notiert und das Firewall-Script wird separat auf einem externen Datenträger gespeichert. So wird sichergestellt, dass auch bei einem Defekt eines der virtuellen Linux-Router die ursprüngliche Konfiguration schnell wieder von Null auf herstellbar ist und möglichst keine Downtime bei der Arbeit entsteht.
 
 \subsection{Pflichtenheft}
 \label{sec:Pflichtenheft}
 % Auszüge aus dem Pflichtenheft/Datenverarbeitungskonzept, wenn es im Rahmen des Projekts erstellt wurde.
-Die aus den zuvor im \ref{sec:Lastenheft} gesammelten Punkte hervorgehenden Anforderungen werden im Pflichtenheft genauer in bevorstehende Aufgaben übersetzt. Dieses ist im \Anhang{app:Pflichtenheft} zu finden.
+Die aus den zuvor im \nameref{sec:Lastenheft} gesammelten Punkte hervorgehenden Anforderungen werden im Pflichtenheft genauer in bevorstehende Aufgaben übersetzt. Dieses ist im \Anhang{app:Pflichtenheft} zu finden.
 
 %\paragraph{Beispiel}
 %Ein Beispiel für das auf dem Lastenheft (siehe Kapitel~\ref{sec:Lastenheft}: \nameref{sec:Lastenheft}) aufbauende Pflichtenheft ist im \Anhang{app:Pflichtenheft} zu finden.
