@@ -2,36 +2,66 @@
 \section{Entwurfsphase} 
 \label{sec:Entwurfsphase}
 % Erklärung
-Da Hard- und Software von unserem Auftraggeber gestellt und vorgegeben wird, erübrigt seine ausführliche Begründung, weshalb wir diese Materialien verwendet haben. So wird sichergestellt, dass während unserer Projektzeit allen die gleichen benötigten Mittel zur Verfügung stehen.
+Die meisten, jedoch nicht alle, Entscheidungen über verwendete Technologien stehen bereits mit Projektbeginn fest. Denn sie sind von der sich in der Entwicklung befindenden Software – Copper abhängig. In der Entwurfsphase ist es das Ziel, anhand der zur Verfügung stehenden Informationen ein Designplan für die Anwendung zur späteren Integration in Copper zu entwickeln.
 
 \subsection{Zielplattform}
 \label{sec:Zielplattform}
+% Beschreibung der Kriterien zur Auswahl der Zielplattform (u.a. Programmiersprache, Datenbank, Client/Server, Hardware)
+Die Ruby on Rails Webanwendung soll unter dem Apple-Betriebssystem OS X laufen. Die Daten werden eine lokal installierte MySQL-Datenbank gespeichert. Die Anbindung zur Datenbank erfolgt über den mysql2 gem, einer Ruby Bibliothek. Zum lokalen Aufrufen und Testen der Applikation über den Chrome-Browser wird der Thin-Webserver verwendet. Die Realisierung der skalierbaren Webanwendung wird über die Auszeichnungssprachen Haml, CSS und dem CSS-Framework Bootstrap sichergestellt.
 
-\paragraph*{Hardware: } 
-Die uns zur Verfügung stehenden Desktop \ac{PC}s bleiben unverändert. Die Leistungsdaten derer  genügen für den Aufbau einer einfachen \ac{DMZ}.
+\subsection{Architekturdesign}
+\label{sec:Architekturdesign}
+% Netzpläne \Anhang{app:Netzplan}
+% Beschreibung und Begründung der gewählten Anwendungsarchitektur (z.B. MVC). Ggfs. Bewertung und Auswahl von verwendeten Frameworks sowie ggfs. eine kurze Einführung in die Funktionsweise des verwendeten Frameworks.
+Als Architekturdesign wird das in Rails üblicherweise eingesetzte Model View Controller (MVC) – Pattern genutzt. Dabei repräsentieren die sich im Model befindlichen Klassen die Datenbanktabellen. Die interne Kommunikation zwischen den Modell-Klassen, der Datenhaltungsschicht, und der MySQL-Datenbank wird dann vom mysql2 gem übernommen. Die browserbasierten Darstellungen und Formulare, die GUI-Schicht, werden in der View repräsentiert. Die Kommunikation und Logik zwischen View und dem Model übernimmt der Controller. Die ankommenden HTTP-Anfragen und Parameter werden über entsprechende Routen an den Controller weitergeleitet, welcher dann anhand dieser die sogenannten Create Read Update Delete (CRUD) – Operationen durchführt.
 
-\paragraph*{Software: } 
-Für die Implementation eines Routers als virtuelle Maschine nutzen wir den vorinstallierten VMWare Player. Dieser ist kostenlos und berechtigt uns zum Virtualisieren einer Linux Distribution. Des Weiteren werden wir auch das beigefügte Debian benutzen. Auf den \ac{VM}s wird mit \ac{BASH} und Linux-Befehlen gearbeitet, da wir nur kleinere Konfigurationen und Scripts schreiben. Um die Konfiguration zu testen, die Router per Remote zu konfigurieren und eventuell Dateien auszutauschen, wird noch \ac{SSH}- und \ac{FTP}-Client-Software benötigt. Dafür werden wir Putty und winscp verwenden. Diese Tools sind kompakt und beeinträchtigen nicht die Leistung der Hosts.
+\subsection{Entwurf der Benutzungsoberfläche}
+\label{sec:Benutzungsoberfläche}
+% Entscheidung für die gewählte Benutzeroberfläche (z.B. GUI, Webinterface).
+% Beschreibung des visuellen Entwurfs der konkreten Oberfläche (z.B. Mockups, Menüführung).
+% Ggfs. Erläuterung von angewendeten Richtlinien zur Usability und Verweis auf Corporate Design.
+Da die Anwendung primär von ausgebildetem Fachpersonal in der Tonbranche verwendet wird, können auch Fachbegriffe oder Abkürzungen verwendet werden. Die Bewertung des Materials sollte jedoch für jedermann verständlich sein. Die Skalierbarkeit der Anwendung wird durch Bootstrap realisiert. Da die Anwendung von internem Personal genutzt und in ein anderes Projekt eingepflegt werden soll, wird auf ein ausgeklügeltes, repräsentatives Design verzichtet. Für Eingabefelder mit begrenzten Werten werden Dropdown-Menüs erzeugt. Zur eindeutigen Kennzeichnung jeder Eingabe werden Label verwendet. Die Datumseingabe erfolgt mithilfe eines Datumswählers. Layout Siehe Anhang Screenshots der Mockups für die neuen Felder in der Eingabemaske findet sich im~\Anhang{subsec:Mockup}.
 
-\subsection{Netzwerkplan}
-\label{sec:Geschaeftslogik}
+\subsection{Datenmodell}
+\label{sec:Datenmodell}
+% Entwurf/Beschreibung der Datenstrukturen (z.B. ERM und/oder Tabellenmodell, XML-Schemas) mit kurzer Beschreibung der wichtigsten (!) verwendeten Entitäten.
+Während der Vorbereitung des Projektantrags ließ mir der externe Entwickler einen kleinen Ausschnitt der Datenbank in Form eines MySQL-Skripts zukommen. Auf dieser Grundlage muss der bestehende Ausschnitt der Datenbank mit den entsprechenden Namenskonventionen erweitert werden. Dabei werden die benötigten Tabellen über Rails migriert. Es werden Tabellen für alle auszufüllenden Felder mit begrenzten Datensätzen erstellt. Eine Tabelle für den Materialeingangsbericht sammelt die eingegebenen Daten und ordnet diese der Tabelle des Teilprojekts zu, indem sie die entsprechenden Datensätze der anderen Tabellen referenziert. Für jede Tabelle muss in Rails eine Klasse angelegt werden. Dort müssen die Eingaben dann validiert werden, bevor sie tatsächlich in die Datenbank geschrieben werden.
 
-Die im \Anhang{app:Netzplan} zu findenden Netzpläne zeigen die grundsätzliche \ac{IP}-Adressverteilung in den geplanten Netzen unseres Projektes.
-Der zweite Netzplan zeigt die erweiterte Testumgebung die wir gegen Ende des Projekts zuhause einrichten mussten, um die Tests an der Firewall zu beenden. 
-Unser Netz teilt sich gleichfalls jeweils in das Labornetz (hier auch symbolisch für die Cloud, das Internet, \etc. stehend), das von der Außenwelt abgeschottete interne Netz (mit den Windows-Clients und dem Admin-Rechner unseres Kunden) und das als Pufferzone dazwischen liegende \ac{DMZ}-Netzwerk, welches zur Absicherung des internen Netzes nur über spezielle Berechtigungen zu erreichen und für spezielle Dienste (Webserver) zu verwenden ist.
+\subsection{Fachkonzept}
+\label{sec:Geschäftslogik}
+% Modellierung und Beschreibung der wichtigsten (!) Bereiche der Geschäftslogik (z.B. mit Komponenten-, Klassen-, Sequenz-, Datenflussdiagramm, Programmablaufplan, Struktogramm, Ereignisgesteuerte Prozesskette (EPK)).
+% Wie wird die erstellte Anwendung in den Arbeitsfluss des Unternehmens integriert?
+Für die Umsetzung der Logik muss jeweils ein Controller für ein Projekt und ein angelegt werden, um die grundlegende Struktur von Copper zu simulieren. Dabei beinhalten diese nur die grundlegendsten Methoden, welche es mir gestatten sollen, mich über den Browser zu meinen Views zu navigieren und den zu erstellenden Controller für die Berichte anzusprechen. Auf diesen werden dann die CRUD-Operationen definiert. 
+
+\textbf{Secretary, Practice, Agenda, Doctor}
 
 \subsection{Maßnahmen zur Qualitätssicherung}
 \label{sec:Qualitaetssicherung}
 % Welche Maßnahmen werden ergriffen, um die Qualität des Projektergebnisses (siehe Kapitel~\ref{sec:Qualitaetsanforderungen}: \nameref{sec:Qualitaetsanforderungen}) zu sichern (\zB automatische Tests, Anwendertests)?
 % \Ggfs Definition von Testfällen und deren Durchführung (durch Programme/Benutzer).
-Bei jeder Veränderungen der Konfiguration werden Funktionstests durchgeführt. Diese sollen gewährleisten, dass die Anforderungen aus dem \nameref{sec:Lastenheft} eingehalten werden. Vorgenommene Änderungen an der Firewall und der Systemkonfiguration werden in unserer vorläufigen Dokumentation, zu finden im \Anhang{app:Anleitung}, notiert und das Firewall-Script wird separat auf einem externen Datenträger gespeichert. So wird sichergestellt, dass auch bei einem Defekt eines der virtuellen Linux-Router die ursprüngliche Konfiguration schnell wieder von Null auf herstellbar ist und möglichst keine Downtime bei der Arbeit entsteht.
+Während der Bearbeitung des Projekts wurde die Funktionalität der Anwendung kontinuierlich getestet. Dabei wurden die Links ausgeführt, die Routen getestet und nach Eingaben die Datenbank auf die Richtigkeit der Werte geprüft. In Zusammenarbeitet mit der QM wird ein für die Abnahme erforderliches Testprotokoll erstellt.
 
 \subsection{Pflichtenheft}
 \label{sec:Pflichtenheft}
 % Auszüge aus dem Pflichtenheft/Datenverarbeitungskonzept, wenn es im Rahmen des Projekts erstellt wurde.
-Die aus den zuvor im \nameref{sec:Lastenheft} gesammelten Punkte hervorgehenden Anforderungen werden im Pflichtenheft genauer in bevorstehende Aufgaben übersetzt. Dieses ist im \Anhang{app:Pflichtenheft} zu finden.
-
-%\paragraph{Beispiel}
-%Ein Beispiel für das auf dem Lastenheft (siehe Kapitel~\ref{sec:Lastenheft}: \nameref{sec:Lastenheft}) aufbauende Pflichtenheft ist im \Anhang{app:Pflichtenheft} zu finden.
+% Refferenz:\nameref{sec:Lastenheft}
+% Pflichtenheft: \Anhang{app:Pflichtenheft}
+Nachfolgend werden die wichtigsten vereinbarten Pflichten des Projekts aufgelistet, um eine Standardisierung der Eingangsberichte, die Integrierbarkeit in Copper sowie die Erweiterbarkeit für die Erstellung späterer Auswertungen zu gewährleisten.\\[1.5ex]
+\textbf{Pflichten der Benutzungsoberfläche:}\\[1.5ex]
+\textbf{PB10:} Es muss eine Webanwendung programmiert und ständig mit Chrome getestet werden.\\
+\textbf{PB20:} Es muss Bootstrap verwendet und die Skalierbarkeit ständig über den Webbrowser getestet werden.\\
+\textbf{PB30:} Jede Eingabe muss ein Label erhalten. Die Namensbezeichnung erfolgt in Absprache mit der zuständigen Mitarbeiterin für Qualitätssicherung.\\
+\textbf{PB40:} Es muss Dropdown-Menüs und Checkboxen geben.\\
+\textbf{PB50:} Es muss Textfelder und Textareas geben. Diese müssen optisch zu den Dropdown-Menüs und Checkboxen zugeordnet werden.\\
+\textbf{PB60:} Es muss eine initiale tabellarische Anzeige der Berichte nach Auswahl des Teilprojekts geben. Dort müssen der Audiotyp, die Version, die Bewertung, sowie Links zum Anzeigen, Bearbeiten und Löschen erscheinen.\\
+\textbf{PB70:} Es muss ein Webformular mit den o.g. Konventionen geben.\\
+\textbf{PB80:} Es muss einen Link zum Bearbeiten geben, welcher das unter PB70 definierte Formular mit den entsprechenden Datensätzen lädt.\\
+\textbf{PB90:} Es gibt einen Link zur Anzeige, welches das unter PB70 definierte Formular mit deaktivierten Eingabefelder lädt.\\[1.5ex]
+\textbf{Funktionelle Pflichten:}\\[1.5ex]
+\textbf{PF10:} Berichte mit gleichem Teilprojekt, Audiotyp und Audioformat müssen eine unterschiedliche Versionsnummer haben.\\
+\textbf{PF20:} Über die Auswahl der Teilprojekte muss die Auswahl eines jeden zugehörigen Berichts erfolgen.\\[1.5ex]
+\textbf{Funktionelle Pflichten:}\\[1.5ex]
+\textbf{PS10:} Alle bekannten Informationen über Copper vom Betriebssystem bis zu den Versionen der Frameworks und Bibliotheken werden verwendet.\\
+\textbf{PS20:} Die Daten werden in eine relationale MySQL-Datenbank gespeichert.
 
 \Zwischenstand{Entwurfsphase}{Entwurf}

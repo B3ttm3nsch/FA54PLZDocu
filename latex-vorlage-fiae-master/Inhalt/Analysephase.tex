@@ -2,47 +2,52 @@
 \section{Analysephase} 
 \label{sec:Analysephase}
 % Überblick
-Im Nachfolgenden verzichten wir auf einen Großteil der üblichen Berechnungen zur Wirtschaftlichkeit des Projektes, da dieses zum Großteil unserer fachlichen Kompetenzbildung dienen soll. Darüber hinaus wäre für ein fiktives mittelständisches Unternehmen ein bereits existierendes Produkt sowohl vom zu erwartenden Arbeitsaufwand wie auch finanziell deutlich günstiger. Es wird daher lediglich eine Beispielhafte Kostenberechnung für die Umsetzung der Planung durch uns erstellt und dafür ein größeres Augenmerk auf Anforderungen und Nutzen des Projekts gelegt. 
+Die erste Analysephase wurde bereits zum Zeitpunkt der Antragstellung des IHK-Projektes durchgeführt. Dort wurde bereits mit dem externen Entwickler gesprochen und auf der Grundlage eines SQL-Scripts ein vorläufiges Datenbankmodell für das Projekt erstellt und eingegrenzt.
 
 \subsection{Ist-Analyse} 
 \label{sec:IstAnalyse}
 % Wie ist die bisherige Situation (\zB bestehende Programme, Wünsche der Mitarbeiter)?
-\paragraph*{Was ist vorhanden: } Im Labor sind für jedes Gruppenmitglied vorhanden: ein Bildschirmarbeitsplatz, Windows 7, Admin-Rechte, zwei physikalische Netzwerkinterfaces, Anschluss an Labornetzwerk und Internet, die Software VMWare Player, Debian Images auf einem Netzlaufwerk sowie ein portabler Miniwebserver.
-% Was gilt es zu erstellen/verbessern?
-\paragraph*{Was ist zu erstellen: } Zuerst muss nun von jeder Gruppe ein Netzplan erstellt werden. Dann gilt es, die Debian 7 (Wheezy) Linux-Images in virtuellen Maschinen auf beiden Rechnern mit Hilfe des VMWare Players aufzusetzen. Diese werden zu einem Outside- und einem Inside-Router konfiguriert und die geplanten Netzwerk- und Routing-Einstellungen müssen sowohl an den virtuellen wie auch physikalischen Schnittstellen durchgeführt werden. Auf dem Rechner des Outside-Routers muss ein Webserver eingerichtet werden, wofür \ac{NAT} und Port-Forwarding nötig sind. Zwischendurch wird es immer wieder der gezielten Recherche bedürfen. Um schließlich Zugriffe von außen zu regulieren, muss eine Firewall mit entsprechenden Regeln erstellt werden, die per Skript an- und abschaltbar ist. Die Funktionalität muss getestet werden und Projekt und Tests sind zu dokumentieren. Unser Lernfortschritt ist in einem Kompetenzportfolio niederzuschreiben. Gleichzeitig sind Laborübungen und Tests zu Linux-Kenntnissen zu absolvieren.
+In der Berliner Synchron GmbH wird sowohl das eingehende als auch das ausgehende Audio- und Videomaterial analysiert und auf Fehler überprüft. Bei der Analyse werden neben möglichen Fehlern auch Meta-Daten wie das Materialeingangsdatum, Audioformat oder die Version gesammelt. Zudem wird entschieden, ob das Material nochmal überarbeitet oder gar vom Kunden neu übermittelt werden muss, bevor es in die Produktion geht. Eine solche Prüfung wird bisher formfrei, meist in Word-Dateien geschrieben. Danach werden die für das Projekt verantwortlichen Mitarbeiter per Email über die Fertigstellung und auf mögliche Mängel hingewiesen. Bei einem solchen Bericht gibt es viele Informationen, welche nur einen begrenzt möglichen Datensatz aufweisen. Weiterhin werden dann die Berichte in den entsprechenden Netzwerkordnern der einzelnen Teilprojekte gespeichert. Das Erhalten eines Überblicks über die Materialeingänge und deren Fehler für ein Teilprojekt ist somit äußerst schwierig. Will man einen solchen Überblick über ein komplettes Projekt oder gar für einen Kunden erhalten, ist dies nahezu unmöglich. Dies erschwert die Kostenberechnung und das Ziehen von Rückschlüssen für künftige Projekte.
 
 \subsection{Wirtschaftlichkeitsanalyse}
 \label{sec:Wirtschaftlichkeitsanalyse}
-Wie bereits Anfänglich erwähnt, lohnt sich das Projekt für ein fiktives mittelständisches Unternehmen nur bedingt.
+Die Wirtschaftlichkeit des neuen standardisierten Berichts zur Qualitätssicherung steht außer Frage. Die derzeitige Darstellung und Bearbeitung ist unübersichtlich und ineffizient. Die Vielzahl der Erstellung von Berichten würde sich in jedem Fall mittelfristig gesehen, refinanzieren. Mit der Inbetriebnahme der neuen Software sollen zudem alle übrigen Projektprozesse dargestellt und deren Kosten ermittelt werden. Warum also die Erstellung eines solchen Berichts ausschließen? Das würde wiederum das Controlling erschweren und auch für diese Kostenstelle einen zusätzlichen Zeit- und damit Kostenaufwand bedeuten.
+
 \subsubsection{\gqq{Make or Buy}-Entscheidung}
 \label{sec:MakeOrBuyEntscheidung}
 % Gibt es vielleicht schon ein fertiges Produkt, dass alle Anforderungen des Projekts abdeckt?
-Die Kosten für eine qualifizierte Kraft zur ständigen Wartung des Servers, die durch Dauerbetrieb anfallenden Stromkosten sowie die zusätzlichen Hardwarekosten bei einem zukünftigen Up-Scaling übersteigen bei weitem die Kosten für einen fachkundig und sicher Administrierten Server bei einem seriösen Hosting-Anbieter.
 % Wenn ja, wieso wird das Projekt trotzdem umgesetzt?
-Da unsere Empfehlung an den Kunden ein Produkt eines anderen Anbieters wäre, wird das Projekt nur zu unserem Nutzen und der Erfahrung willen, die wir damit gewinnen, umgesetzt.
+Da die Synchronbranche sehr speziell ist und es keine standardisierte Arbeitsweise oder Projektsoftware für diesen Bereich gibt, entschied sich die BSG einen externen Dienstleister mit der Entwicklung einer Software, zugeschnitten auf die Bedürfnisse des Unternehmens, zu engagieren. Von Anfang an war klar, dass dieses Projekt, selbst nach Einführung, von der unternehmenseigenen IT-Abteilung stetig weiterentwickelt werden soll und muss. Da die neue Software noch in den Händen des Entwicklers ist, stellt sich nur die Frage, ob dieser den neuen Bericht erstellt oder der firmeneigene Mitarbeiter/Auszubildende. Aus Kostengesichtspunkten ist der Auszubildende für das Unternehmen am geeignetsten. 
+
 \subsubsection{Projektkosten}
 \label{sec:Projektkosten}
 % Welche Kosten fallen bei der Umsetzung des Projekts im Detail an (\zB Entwicklung, Einführung/Schulung, Wartung)?
-Da es sich nur um ein fiktives Projekt handelt, verzichten wir auf eine detaillierte Berechnung mit Stromkosten innerhalb des Labors, den Gehältern der Lehrkräfte oder etwaiger Lizenzgebühren. Wir beschränken uns auf eine fiktive Beispielrechnung mit unserem Stundenlohn während der Projektdauer.
-\paragraph*{Beispielrechnung (verkürzt): } Die realen Kosten für die Durchführung des Projekts setzen sich sowohl aus Personal-, als auch aus Ressourcenkosten zusammen. Wir rechnen hier lediglich mit dem fiktiven Gehalt eines Auszubildendem im zweiten Lehrjahr von ca. \eur{800} Brutto pro Monat. 
-% Stundenlohn (brutto) = 3 × dein Monatslohn (brutto) ÷ 13 ÷ die Anzahl deiner wöchentlichen Arbeitsstunden
-\begin{eqnarray}
-3\cdot \eur{800}\mbox{/Monat} \div {13} \div 40 \mbox{ h/Monat} \approx \eur{4,62}\mbox{/h}
-\end{eqnarray}
-Es ergibt sich also ein Stundenlohn von \eur{4,62}. Die Durchführungszeit des Projekts beträgt 42 Stunden. Die Nutzung von Ressourcen\footnote{Räumlichkeiten, Arbeitsplatzrechner etc.} sowie die Kosten durch andere Mitarbeiter werden hier nicht mit eingerechnet. Eine Aufstellung der Kosten befindet sich in Tabelle~\ref{tab:Kostenaufstellung} und sie betragen insgesamt \eur{388,08} für zwei Entwickler bei 42 h/Monat Arbeitszeit und je einem Gehalt von \eur{800} monatlich.
+Die Kosten zur Durchführung des Projekts ergeben sich aus den Gehältern der beteiligten Mitarbeiter, die für die Mitarbeiter aufzuwendenden Sozialabgaben, sowie die Gemeinkosten sonstiger Ressourcen(Footnote). Sonstige Ressourcen wie Internet und Strom werden dabei vernachlässigt, da diese Kosten ohnehin anfallen. Bei 20 Arbeitstagen monatlich erhält der Auszubildende \eur{884} brutto. Der Arbeitgeberanteil zur Sozialversicherung beträgt dabei \eur{229,53}. Für den Personalaufwand der übrigen Mitarbeiter wird mit einer Pauschale von \eur{30} / Stunde gerechnet.
 
-\tabelle{Kosten für 2 Entwickler/Monat}{tab:Kostenaufstellung}{Kostenaufstellung.tex}
+\begin{eqnarray}
+8 \mbox{ h/Tag}  \cdot 20 \mbox{ Tage/Monat}  = 160  \mbox{ h/Monat}
+\end{eqnarray}
+\begin{eqnarray}
+\frac{\eur{884,00} + \eur{229,53}\mbox{/Monat}}{160\mbox{ h/Monat}} = \frac{\eur{1113,53}\mbox{/Monat}}{160\mbox{h/Monat}} = \eur{6,96}\mbox{/h}
+\end{eqnarray}
+
+Es ergibt sich ein Stundenlohn von \eur{6,96}. Die Durchführungszeit des Projekts beträgt 70 Stunden. Die Nutzung von Ressourcen\footnote{Räumlichkeiten, Arbeitsplatzrechner, Lizenzen, etc.} wird hier mit einem pauschalen Stundensatz von \eur{10} berücksichtigt. Eine Aufstellung der Kosten befindet sich in Tabelle~\ref{tab:Kostenaufstellung}. Die Kosten belaufen sich auf insgesamt \eur{1397,20}.
+
+\tabelle{Projektkosten}{tab:Kostenaufstellung}{Kostenaufstellung.tex}
+
+Es ergibt sich demnach ein Stundensatz von 6,96 €. Die Durchführungszeit des Projekts beträgt 70 Stunden. Für die Nutzung der Ressourcen wird ein pauschaler Stundensatz von 10€ herangezogen. Nachfolgender Tabelle lässt sich eine detaillierte Kostenübersicht entnehmen.
 
 \subsubsection{Amortisationsdauer}
 \label{sec:Amortisationsdauer}
 % Welche monetären Vorteile bietet das Projekt (\zB Einsparung von Lizenzkosten, Arbeitszeitersparnis, bessere Usability, Korrektheit)?
 % Wann hat sich das Projekt amortisiert?
-Aufgrund unserer \gqq{Make or Buy}-Entscheidung und da das Projekt nur zu Lernzwecken umgesetzt wird verzichten wir hier auf die Berechnung eines fiktiven Rentabilitätszeitpunktes. Das gelernte wird sich spätestens zur \ac{IHK}-Prüfung und bei der Anfertigung der Dokumentation des \ac{IHK}-Abschlussprojektes auszahlen.
+Geht man von einer Zeitersparnis bei der Erstellung von 10 Minuten pro Bericht aus, bei zwei Berichten pro Tag, ergibt sich eine durchschnittliche monatliche Zeitersparnis von 400 Minuten über 6,6 Stunden. Bei der veranschlagten Mitarbeiterpauschale ergibt sich eine monatliche Kostenersparnis von 200€. Damit wäre dieses Projekt nach knapp über 6 Monaten amortisiert.
+Die tatsächliche Amortisationsdauer des Projektes ist zum jetzigen Zeitpunkt noch nicht absehbar, da es nur den ersten Teil des Projekts zur Qualitätssicherung darstellt. Dies stellt wiederum auch nur einen Teil des viel größeren Projektes – Copper dar.
 
 \subsection{Nutzwertanalyse}
 \label{sec:Nutzwertanalyse}
 % Darstellung des nicht-monetären Nutzens (\zB Vorher-/Nachher-Vergleich anhand eines Wirtschaftlichkeitskoeffizienten). 
-Durch den Aufbau einer \ac{DMZ} können wir die Zugriffe auf unsere Server, in diesem Fall ein einfacher Webserver, von Außen und Innen reglementieren. So wird über den Routern mit einer konfigurierten Firewall ein sicherer Zugang zu unserem Webserver ermöglicht. Die Aufteilung in unterschiedliche Netzwerke ermöglicht den Administratoren eine einfachere Verwaltung der Berechtigungen für die Mitglieder des Firmennetzes.
+Neben der Zeitersparnis und Minimierung der Fehleranfälligkeit liegt der größte Nutzen des Projekts in der Standardisierung der Berichte, sowie der späteren Integration in Copper. Auf dieser Grundlage lassen sich die tatsächlich aufgetreten Projektkosten noch genauer kalkulieren und es ist mögliche Rückschlüsse auf Kosten zukünftiger Projekte zu ziehen.
 
 %\paragraph{Beispiel}
 %Ein Beispiel für eine Entscheidungsmatrix findet sich in Kapitel~\ref{sec:Architekturdesign}: \nameref{sec:Architekturdesign}.
@@ -50,15 +55,28 @@ Durch den Aufbau einer \ac{DMZ} können wir die Zugriffe auf unsere Server, in d
 \subsection{Qualitätsanforderungen}
 \label{sec:Qualitaetsanforderungen}
 % Welche Qualitätsanforderungen werden an die Anwendung gestellt (\zB hinsichtlich Performance, Usability, Effizienz \etc (siehe \citet{ISO9126}))?
-Der Webserver soll von Außen (über die öffentliche \ac{IP}-Adresse des Outside-Routers) und Innen erreichbar, aber vor unbefugten Zugriffen potentieller Angreifer mit den uns zur Verfügung stehenden Mitteln geschützt werden. Es muss also sichergestellt werden, dass kein unberechtigter Dritter administrativen Zugriff auf die Geräte und deren Konfiguration hat. Dabei ist darauf zu achten, dass die Mitarbeiter mit entsprechender Berechtigung (also zum Beispiel von einem Admin-\ac{PC} aus dem inneren Netz aus) weiterhin Zugriff auf das Internet und den Webserver in der \ac{DMZ} haben.
+Die Webanwendung soll intuitiv und leicht bedienbar für die im Tonbereich qualifizierten Mitarbeiter sein. Schlüsseldatensätze für spätere Auswertungen sollen auswählbar sein. Zudem muss es für etwaige Fehler Kommentarfelder für genauere Erläuterungen geben. Die Berichte müssen sich eindeutig unterscheiden und einem Teilprojekt zugeordnet sein. Es muss möglich sein, sich die erstellten Berichte anzusehen und diese gegebenenfalls zu editieren. Zudem muss es eine Übersicht über die erstellten Berichte eines Teilprojekts geben. Die komplette Ansicht ist über Google-Chrome skalierbar.
 
 \subsection{Lastenheft}
 \label{sec:Lastenheft}
 % Auszüge aus dem Lastenheft/Fachkonzept, wenn es im Rahmen des Projekts erstellt wurde.
 % Mögliche Inhalte: Funktionen des Programms (Muss/Soll/Wunsch), User Stories, Benutzerrollen
-Einen genaueren Überblick über die festgestellten Anforderungen an die einzelnen Teile der \ac{DMZ} findet sich in unserem ausführlichen Lastenheft im \Anhang{app:Lastenheft}. Im groben gliedern sich die Anforderungen jedoch in folgende generelle Bereiche:
-
-\paragraph*{Die Mitarbeiter} sollen untereinander, mit dem Webserver und dem Internet kommunizieren können, dabei jedoch bestmöglich geschützt werden.
-\paragraph*{Die Administrator} sollen zusätzlich die Möglichkeit haben, die Server und Router aus der Ferne zu warten. Dabei sollte es unerheblich sein, wie viele Clients und Server sich im internen \bzw \ac{DMZ}-Netz befinden.
+% ausführliches Lastenheft im \Anhang{app:Lastenheft}
+Nachfolgend werden die wichtigsten Anforderungen für das Projekt dargestellt.\\[1.5ex]
+\textbf{Anforderungen an die Benutzungsoberfläche:}\\[1.5ex]
+\textbf{LB10:} Die Berichte müssen online über den Chrome-Webbrowser erreichbar sein.\\
+\textbf{LB20:} Die Ansicht muss skalierbar sein.\\
+\textbf{LB30:} Die Bedienung und Formularfelder müssen intuitiv und selbsterklärend sein.\\
+\textbf{LB40:} Sich wiederholende standardisierte Datensätze müssen auswählbar sein.\\
+\textbf{LB50:} Es muss möglich sein zu diversen Datensätze Kommentare zu schreiben.\\
+\textbf{LB60:} Erstellte Berichte müssen editierbar sein.\\
+\textbf{LB70:} Für die erstellten Berichte muss es eine Anzeige geben.\\
+\textbf{LB80:} Es muss eine Übersicht aller Berichte eines Teilprojekts geben.\\[1.5ex]
+\textbf{Funktionelle Anforderungen:}\\[1.5ex]
+\textbf{LF10:} Die Berichte müssen eindeutig voneinander unterschieden werden können.\\
+\textbf{LF20:} Die Navigation zu den Berichten muss vorhanden sein.\\[1.5ex]
+\textbf{Sonstige Anforderungen:}\\[1.5ex]
+\textbf{LS10:} Die Anwendung muss anhand der vorhandenen Information in Copper integrierbar sein.\\
+\textbf{LS20:} Das Projekt muss für das Anschlussprojekt erweiterbar sein.
 
 \Zwischenstand{Analysephase}{Analyse}
